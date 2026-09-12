@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://qn08inndbqxo"]
+
+[ext_resource type="Script" uid="uid://rltaed3bfhte" path="res://Scenes/Home/2DS_home.gd" id="1_aw5n8"]
+[ext_resource type="Texture2D" uid="uid://bsjhc0x8ramg2" path="res://icon.svg" id="2_mojn8"]
+
+[node name="2DS_home" type="Node2D" unique_id=1188352279]
+script = ExtResource("1_aw5n8")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1944264551]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1136716360]
+texture = ExtResource("2_mojn8")
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=448596514]
+
+[node name="Control" type="Control" parent="HUD" unique_id=1608504908]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="HUD/Control" unique_id=642282266]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="HUD/Control/HBoxContainer" unique_id=122739096]
+layout_mode = 2
+text = "Menu"
+
+[node name="Button2" type="Button" parent="HUD/Control/HBoxContainer" unique_id=769131673]
+layout_mode = 2
+text = "Test"
+
+[node name="Button3" type="Button" parent="HUD/Control/HBoxContainer" unique_id=11682251]
+layout_mode = 2
+text = "Test"
+
+[node name="Button4" type="Button" parent="HUD/Control/HBoxContainer" unique_id=1163213538]
+layout_mode = 2
+text = "Test"
+
+[node name="Button5" type="Button" parent="HUD/Control/HBoxContainer" unique_id=609204150]
+layout_mode = 2
+text = "Test"
+
+[connection signal="pressed" from="HUD/Control/HBoxContainer/Button" to="." method="_on_button_pressed"]
