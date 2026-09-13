@@ -13,6 +13,15 @@ var skill_run:   int
 var skill_swim:  int
 var racism:      int
 
+# Scene Swapping
+var target_scene: String
+var scene: PackedScene = preload("res://Scenes/Transition/UIS_trans.tscn")
+
+func loadscene(ScenePath: String) -> void:
+	var loader = scene.instantiate()
+	target_scene = ScenePath
+	get_tree().root.add_child(loader)
+	
 func boot_config() -> void:
 	if FileAccess.file_exists("user://player.cfg"):
 		cfg.load("user://Config.cfg")

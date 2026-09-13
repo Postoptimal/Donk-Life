@@ -1,25 +1,30 @@
 [gd_scene format=3 uid="uid://qn08inndbqxo"]
 
 [ext_resource type="Script" uid="uid://rltaed3bfhte" path="res://Scenes/Home/2DS_home.gd" id="1_aw5n8"]
-[ext_resource type="Texture2D" uid="uid://bsjhc0x8ramg2" path="res://icon.svg" id="2_mojn8"]
+[ext_resource type="Texture2D" uid="uid://mldpw3rwpeso" path="res://Assets/T_HomePlacehodler.png" id="2_s36o5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mdp0"]
+size = Vector2(103.5, 154)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rbnge"]
+size = Vector2(122, 111)
 
 [node name="2DS_home" type="Node2D" unique_id=1188352279]
 script = ExtResource("1_aw5n8")
 
-[node name="Camera" type="Camera2D" parent="." unique_id=1944264551]
+[node name="bg" type="Sprite2D" parent="." unique_id=1766766629]
+scale = Vector2(0.85, 0.85)
+texture = ExtResource("2_s36o5")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1136716360]
-texture = ExtResource("2_mojn8")
+[node name="Camera" type="Camera2D" parent="." unique_id=1944264551]
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=448596514]
 
 [node name="Control" type="Control" parent="HUD" unique_id=1608504908]
 layout_mode = 3
-anchors_preset = 15
+anchors_preset = 10
 anchor_right = 1.0
-anchor_bottom = 1.0
 grow_horizontal = 2
-grow_vertical = 2
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HUD/Control" unique_id=642282266]
 layout_mode = 0
@@ -32,18 +37,35 @@ text = "Menu"
 
 [node name="Button2" type="Button" parent="HUD/Control/HBoxContainer" unique_id=769131673]
 layout_mode = 2
-text = "Test"
+text = "Climb Training"
 
 [node name="Button3" type="Button" parent="HUD/Control/HBoxContainer" unique_id=11682251]
 layout_mode = 2
-text = "Test"
+text = "Run Training"
 
 [node name="Button4" type="Button" parent="HUD/Control/HBoxContainer" unique_id=1163213538]
 layout_mode = 2
-text = "Test"
+text = "Swim Training"
 
 [node name="Button5" type="Button" parent="HUD/Control/HBoxContainer" unique_id=609204150]
 layout_mode = 2
-text = "Test"
+text = "Races"
+
+[node name="Area_Race" type="Area2D" parent="." unique_id=1609630869]
+position = Vector2(2.26, -140.09)
+
+[node name="Area_Coll" type="CollisionShape2D" parent="Area_Race" unique_id=1639046391]
+shape = SubResource("RectangleShape2D_2mdp0")
+
+[node name="Area_Swim" type="Area2D" parent="." unique_id=1889352825]
+position = Vector2(-550, 200)
+
+[node name="Swim_Coll" type="CollisionShape2D" parent="Area_Swim" unique_id=1234122441]
+position = Vector2(16, 45.5)
+shape = SubResource("RectangleShape2D_rbnge")
 
 [connection signal="pressed" from="HUD/Control/HBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="Area_Race" to="." method="_on_area_race_mouse_entered"]
+[connection signal="mouse_exited" from="Area_Race" to="." method="_on_area_race_mouse_exited"]
+[connection signal="mouse_entered" from="Area_Swim" to="." method="_on_area_swim_mouse_entered"]
+[connection signal="mouse_exited" from="Area_Swim" to="." method="_on_area_swim_mouse_exited"]
