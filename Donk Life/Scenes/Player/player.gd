@@ -5,7 +5,7 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
 
 @export var sprites: Node2D
-
+@export var anim_player: AnimationPlayer
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
@@ -23,11 +23,13 @@ func _physics_process(delta: float) -> void:
 		if direction!=0:
 			flip_sprite(sign(direction)<0)
 		velocity.x = direction * SPEED
+		anim_player.play("walk")
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		anim_player.play("idle")
 
 	move_and_slide()
 
 func flip_sprite(flip:bool):
 	for s:Sprite2D in sprites.get_children():
-		s.flip_h = flip	
+		s.flip_h = flip
