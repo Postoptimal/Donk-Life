@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c4iq6kk17dfq1"]
 
 [ext_resource type="Script" uid="uid://bs1v2tye7r6n0" path="res://Scenes/Menu/uis_menu.gd" id="1_hq1nm"]
+[ext_resource type="FontFile" uid="uid://isx50xagv0q4" path="res://Assets/child-hood.regular.otf" id="2_53plu"]
 
 [node name="UIS_menu" type="Control" unique_id=1711478582]
 layout_mode = 3
@@ -11,7 +12,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hq1nm")
 
-[node name="White" type="ColorRect" parent="." unique_id=293855494]
+[node name="bg" type="ColorRect" parent="." unique_id=293855494]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,15 +22,30 @@ grow_vertical = 2
 
 [node name="Button" type="Button" parent="." unique_id=482070359]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 125.0
+offset_top = 288.0
+offset_right = 180.0
+offset_bottom = 319.0
 text = "Home"
 
 [node name="Button2" type="Button" parent="." unique_id=246045550]
 layout_mode = 0
-offset_right = 8.0
-offset_bottom = 8.0
+offset_left = 203.0
+offset_top = 292.0
+offset_right = 273.0
+offset_bottom = 323.0
 text = "Settings"
+
+[node name="Label" type="Label" parent="." unique_id=2019679577]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 198.0
+offset_right = 1107.0
+offset_bottom = 285.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_53plu")
+theme_override_font_sizes/font_size = 69
+text = "THIS IS THE SPLASH/MENU LOL"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]
