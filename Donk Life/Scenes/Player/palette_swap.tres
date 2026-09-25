@@ -26,7 +26,7 @@ for (int i = 0; i < colors_count; i++) {
 	vec4 original_palette_color = texture(original_palette, uv);
 	float dist = distance(color, original_palette_color);
 	
-	if (dist < 0.05) {
+	if (dist < 0.5) {
 		new_uv = uv;
 		break;
 	}
@@ -39,7 +39,7 @@ mode = 1
 flags/light_only = false
 nodes/fragment/0/position = Vector2(1540, 160)
 nodes/fragment/2/node = SubResource("VisualShaderNodeInput_lgmin")
-nodes/fragment/2/position = Vector2(-260, 220)
+nodes/fragment/2/position = Vector2(-240, 180)
 nodes/fragment/3/node = SubResource("VisualShaderNodeTexture_oi4rg")
 nodes/fragment/3/position = Vector2(140, 120)
 nodes/fragment/4/node = SubResource("VisualShaderNodeTexture2DParameter_r3plo")
@@ -61,11 +61,11 @@ for (int i = 0; i < colors_count; i++) {
 	vec4 original_palette_color = texture(original_palette, uv);
 	float dist = distance(color, original_palette_color);
 	
-	if (dist < 0.05) {
+	if (dist < 0.5) {
 		new_uv = uv;
 		break;
 	}
 }
 
 new_color = texture(new_palette, new_uv);"
-nodes/fragment/connections = PackedInt32Array(6, 0, 7, 3, 3, 0, 7, 0, 4, 0, 7, 1, 5, 0, 7, 2, 7, 0, 0, 0)
+nodes/fragment/connections = PackedInt32Array(6, 0, 7, 3, 3, 0, 7, 0, 4, 0, 7, 1, 5, 0, 7, 2, 7, 0, 0, 0, 2, 0, 3, 2)

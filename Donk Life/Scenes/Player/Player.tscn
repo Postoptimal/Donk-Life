@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://vqvya1omsegs" path="res://Assets/Player/Body.png" id="2_4wape"]
 [ext_resource type="Shader" uid="uid://cd2hkvfk6xc5g" path="res://Scenes/Player/palette_swap.tres" id="2_825xp"]
 [ext_resource type="Shader" uid="uid://bnhf5nuwsntq" path="res://Scenes/Player/outline.gdshader" id="2_fk5o5"]
-[ext_resource type="Texture2D" uid="uid://6bpkrg1fl4p5" path="res://Assets/Palettes/Green.png" id="3_0kmp4"]
 [ext_resource type="Texture2D" uid="uid://dsk68qxxr3tif" path="res://Assets/Player/Head.png" id="3_t26db"]
 [ext_resource type="Texture2D" uid="uid://chlsj1o4h5u3v" path="res://Assets/Player/Left_Leg.png" id="4_fk5o5"]
 [ext_resource type="Texture2D" uid="uid://cbax1sxehq1dd" path="res://Assets/Palettes/Default.png" id="4_i5acl"]
 [ext_resource type="Texture2D" uid="uid://betmbqnooa60i" path="res://Assets/Player/Right_Leg.png" id="5_825xp"]
+[ext_resource type="Texture2D" uid="uid://bd2yc2xatqng7" path="res://Assets/Palettes/Red.png" id="6_0kmp4"]
 [ext_resource type="Texture2D" uid="uid://57r58u6uiuig" path="res://Assets/Player/Swimming sheet.png" id="6_4wape"]
 [ext_resource type="Texture2D" uid="uid://cf2uwtc1jj0rp" path="res://Assets/Player/Tail.png" id="6_t26db"]
 
@@ -18,10 +18,10 @@ shader_parameter/outline_color = Color(0.05490196, 0.19215687, 0.27058825, 1)
 shader_parameter/thickness = 10.000000149012
 shader_parameter/sample_count = 16
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xef34"]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r3plo"]
 shader = ExtResource("2_825xp")
 shader_parameter/original = ExtResource("4_i5acl")
-shader_parameter/new_palette = ExtResource("3_0kmp4")
+shader_parameter/new_palette = ExtResource("6_0kmp4")
 shader_parameter/colors_count = 4
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0kmp4"]
@@ -262,7 +262,7 @@ script = ExtResource("1_jmcll")
 material = SubResource("ShaderMaterial_yk1l4")
 
 [node name="Body" type="Sprite2D" parent="CanvasGroup" unique_id=675494364]
-material = SubResource("ShaderMaterial_xef34")
+material = SubResource("ShaderMaterial_r3plo")
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_4wape")
 offset = Vector2(8.095, -55.035)
