@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://c1jbwtc28aeoi"]
+
+[ext_resource type="Script" uid="uid://hjswwggke04k" path="res://Scenes/Levels/running.gd" id="1_spjhx"]
+[ext_resource type="FontFile" uid="uid://isx50xagv0q4" path="res://Assets/child-hood.regular.otf" id="2_p4vso"]
+
+[node name="Racing" type="Node2D" unique_id=1761791514]
+script = ExtResource("1_spjhx")
+
+[node name="bg" type="ColorRect" parent="." unique_id=422825077]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.36215425, 0.5672489, 0.27660406, 1)
+
+[node name="Button" type="Button" parent="." unique_id=773296883]
+offset_left = 125.0
+offset_top = 288.0
+offset_right = 180.0
+offset_bottom = 319.0
+text = "Home"
+
+[node name="Label" type="Label" parent="." unique_id=1975280239]
+offset_left = 307.0
+offset_top = 198.0
+offset_right = 1107.0
+offset_bottom = 285.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_p4vso")
+theme_override_font_sizes/font_size = 69
+text = "THIS IS THE RACING MINIGAME LOL."
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

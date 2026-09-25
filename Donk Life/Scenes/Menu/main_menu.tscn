@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c4iq6kk17dfq1"]
 
-[ext_resource type="Script" uid="uid://bs1v2tye7r6n0" path="res://Scenes/Menu/uis_menu.gd" id="1_hq1nm"]
-[ext_resource type="FontFile" uid="uid://isx50xagv0q4" path="res://Assets/child-hood.regular.otf" id="2_53plu"]
+[ext_resource type="Script" uid="uid://bs1v2tye7r6n0" path="res://Scenes/Menu/main_menu.gd" id="1_tself"]
+[ext_resource type="FontFile" uid="uid://isx50xagv0q4" path="res://Assets/child-hood.regular.otf" id="2_7jtkx"]
 
 [node name="UIS_menu" type="Control" unique_id=1711478582]
 layout_mode = 3
@@ -10,7 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_hq1nm")
+script = ExtResource("1_tself")
 
 [node name="bg" type="ColorRect" parent="." unique_id=293855494]
 layout_mode = 1
@@ -43,7 +43,7 @@ offset_top = 198.0
 offset_right = 1107.0
 offset_bottom = 285.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("2_53plu")
+theme_override_fonts/font = ExtResource("2_7jtkx")
 theme_override_font_sizes/font_size = 69
 text = "THIS IS THE SPLASH/MENU LOL"
 

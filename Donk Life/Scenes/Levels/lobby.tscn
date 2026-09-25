@@ -1,0 +1,197 @@
+[gd_scene format=3 uid="uid://qn08inndbqxo"]
+
+[ext_resource type="Script" uid="uid://rltaed3bfhte" path="res://Scenes/Levels/lobby.gd" id="1_sal5b"]
+[ext_resource type="Texture2D" uid="uid://c0f18ht23bhi4" path="res://Assets/Lobby/Placeholders/Sky.PNG" id="2_8c0ee"]
+[ext_resource type="Texture2D" uid="uid://cy2kemslglkbe" path="res://Assets/Lobby/Placeholders/Space Effects.PNG" id="3_fq5h8"]
+[ext_resource type="Texture2D" uid="uid://biiqxrvxead7d" path="res://Assets/Lobby/Placeholders/Mountain.PNG" id="4_3srp3"]
+[ext_resource type="Texture2D" uid="uid://bd11xfun6ebyt" path="res://Assets/Lobby/Placeholders/Bushes.PNG" id="5_uljpw"]
+[ext_resource type="Texture2D" uid="uid://djolxs14wtmh8" path="res://Assets/Lobby/Placeholders/Tower.PNG" id="6_fyhpd"]
+[ext_resource type="Texture2D" uid="uid://dk3bp00bych8f" path="res://Assets/Lobby/Placeholders/Grass.PNG" id="7_2o64t"]
+[ext_resource type="Texture2D" uid="uid://bq5s6inbl7nkq" path="res://Assets/Lobby/Placeholders/Puddle.PNG" id="8_v2jc0"]
+[ext_resource type="Texture2D" uid="uid://cb0f2k6dew0bx" path="res://Assets/Lobby/Placeholders/Roy_Mopping.PNG" id="9_aeugk"]
+[ext_resource type="Texture2D" uid="uid://md7vipor52lt" path="res://Assets/Lobby/Placeholders/Lemming.PNG" id="10_5yi86"]
+[ext_resource type="Texture2D" uid="uid://cfvnsq8jeoept" path="res://Assets/Lobby/Placeholders/Sugar cubes.PNG" id="11_x8l11"]
+[ext_resource type="Texture2D" uid="uid://0yv48splf33e" path="res://Assets/Lobby/Placeholders/Cloud1.PNG" id="12_8d7cw"]
+[ext_resource type="Texture2D" uid="uid://bqb1knbeocw5p" path="res://Assets/Lobby/Placeholders/Cloud2.PNG" id="13_kavh7"]
+[ext_resource type="Texture2D" uid="uid://d1hfnh1vup6a1" path="res://Assets/Lobby/Placeholders/Cloud3.PNG" id="14_d3nbn"]
+[ext_resource type="Texture2D" uid="uid://ciuktljl6i3q7" path="res://Assets/Lobby/Placeholders/Pigeon.PNG" id="15_sihua"]
+[ext_resource type="Texture2D" uid="uid://c7n6r65hbs6a5" path="res://Assets/Lobby/Placeholders/Shop.PNG" id="16_aek04"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mdp0"]
+size = Vector2(325, 240.09)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30gaw"]
+size = Vector2(103.5, 154)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r3kbu"]
+size = Vector2(364.37534, 485.5263)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gcdwp"]
+radius = 198.89
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mr72c"]
+size = Vector2(79.25003, 93.44737)
+
+[node name="2DS_home" type="Node2D" unique_id=1188352279 node_paths=PackedStringArray("Mountain", "Space", "Puddle", "Roy", "Tower", "Birb", "Sign")]
+script = ExtResource("1_sal5b")
+Climbing = "uid://m7l6qsrj8k41"
+Running = "uid://c1jbwtc28aeoi"
+Racing = "uid://cuad0bw5oh3or"
+Swimming = "uid://d2a3np5pxolqs"
+Menu = "uid://c4iq6kk17dfq1"
+Mountain = NodePath("Scene/Climbing/Mountain")
+Space = NodePath("Scene/Climbing/Space")
+Puddle = NodePath("Scene/Swimming/Puddle")
+Roy = NodePath("Scene/Swimming/Roy")
+Tower = NodePath("Scene/Tower")
+Birb = NodePath("Scene/Birb")
+Sign = NodePath("Scene/Exit")
+
+[node name="Scene" type="Node2D" parent="." unique_id=1274523899]
+
+[node name="Sky" type="Sprite2D" parent="Scene" unique_id=1772113433]
+scale = Vector2(1.14375, 1.1333333)
+texture = ExtResource("2_8c0ee")
+
+[node name="Climbing" type="Node2D" parent="Scene" unique_id=1683184286]
+
+[node name="Space" type="Sprite2D" parent="Scene/Climbing" unique_id=566088616]
+position = Vector2(-818.00006, -334)
+scale = Vector2(0.68027735, 0.6802773)
+texture = ExtResource("3_fq5h8")
+
+[node name="Mountain" type="Sprite2D" parent="Scene/Climbing" unique_id=1673508748]
+position = Vector2(-539, -50)
+scale = Vector2(1.6548387, 1.6548387)
+texture = ExtResource("4_3srp3")
+
+[node name="Bushes" type="Node2D" parent="Scene" unique_id=1839081078]
+
+[node name="Bush1" type="Sprite2D" parent="Scene/Bushes" unique_id=2048269852]
+position = Vector2(-225.86255, 341.99994)
+scale = Vector2(0.59, 0.59)
+texture = ExtResource("5_uljpw")
+
+[node name="Bush2" type="Sprite2D" parent="Scene/Bushes" unique_id=154627700]
+position = Vector2(1006.13745, 341.99994)
+scale = Vector2(0.59, 0.59)
+texture = ExtResource("5_uljpw")
+
+[node name="Bush3" type="Sprite2D" parent="Scene/Bushes" unique_id=1469827801]
+position = Vector2(-1017.86255, 341.99994)
+scale = Vector2(0.59, 0.59)
+texture = ExtResource("5_uljpw")
+
+[node name="Tower" type="Sprite2D" parent="Scene" unique_id=264944432]
+position = Vector2(367.75003, 354.6079)
+scale = Vector2(0.72105265, 0.72105265)
+texture = ExtResource("6_fyhpd")
+
+[node name="Ground" type="Sprite2D" parent="Scene" unique_id=143195123]
+position = Vector2(0, 485.75)
+texture = ExtResource("7_2o64t")
+
+[node name="Swimming" type="Node2D" parent="Scene" unique_id=1290445546]
+
+[node name="Puddle" type="Sprite2D" parent="Scene/Swimming" unique_id=1847780067]
+position = Vector2(-800.125, 429.89597)
+scale = Vector2(1.159594, 1)
+texture = ExtResource("8_v2jc0")
+
+[node name="Roy" type="Sprite2D" parent="Scene/Swimming" unique_id=2078954286]
+position = Vector2(-829, 370)
+texture = ExtResource("9_aeugk")
+
+[node name="Lemming" type="Sprite2D" parent="Scene" unique_id=1207944518]
+position = Vector2(495.99997, 389.75)
+texture = ExtResource("10_5yi86")
+
+[node name="Sugar" type="Sprite2D" parent="Scene" unique_id=473585914]
+position = Vector2(-222.00002, 418)
+scale = Vector2(0.8975408, 0.8975408)
+texture = ExtResource("11_x8l11")
+
+[node name="Clouds" type="Node2D" parent="Scene" unique_id=569072376]
+
+[node name="Cloud1" type="Sprite2D" parent="Scene/Clouds" unique_id=2107911982]
+position = Vector2(137, -341)
+scale = Vector2(0.37347934, 0.3734793)
+texture = ExtResource("12_8d7cw")
+
+[node name="Cloud2" type="Sprite2D" parent="Scene/Clouds" unique_id=907594276]
+position = Vector2(672, -144)
+scale = Vector2(0.37347934, 0.3734793)
+texture = ExtResource("13_kavh7")
+
+[node name="Cloud3" type="Sprite2D" parent="Scene/Clouds" unique_id=467000234]
+position = Vector2(375, -82)
+scale = Vector2(0.37347934, 0.3734793)
+texture = ExtResource("14_d3nbn")
+
+[node name="Birb" type="Sprite2D" parent="Scene" unique_id=409826231]
+position = Vector2(20, -138)
+scale = Vector2(0.47999984, 0.47999984)
+texture = ExtResource("15_sihua")
+
+[node name="Exit" type="Sprite2D" parent="Scene" unique_id=1674757384]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(779, 379.99997)
+scale = Vector2(0.19402283, 0.18432176)
+texture = ExtResource("16_aek04")
+
+[node name="Camera" type="Camera2D" parent="." unique_id=1944264551]
+
+[node name="Area_Racing" type="Area2D" parent="." unique_id=1609630869]
+position = Vector2(2.26, -140.09)
+
+[node name="Area_Coll" type="CollisionShape2D" parent="Area_Racing" unique_id=1639046391]
+position = Vector2(4.7400017, -2.9100037)
+shape = SubResource("RectangleShape2D_2mdp0")
+
+[node name="Area_Running" type="Area2D" parent="." unique_id=948217239]
+position = Vector2(364, 352)
+scale = Vector2(1.5999987, 1.5199994)
+
+[node name="Area_Coll" type="CollisionShape2D" parent="Area_Running" unique_id=1835607222]
+shape = SubResource("RectangleShape2D_30gaw")
+
+[node name="Area_Climbing" type="Area2D" parent="." unique_id=1750342695]
+position = Vector2(364, 352)
+scale = Vector2(1.5999987, 1.5199994)
+
+[node name="Area_Coll" type="CollisionShape2D" parent="Area_Climbing" unique_id=548914769]
+position = Vector2(-534.6878, -284.8683)
+scale = Vector2(0.9999998, 0.9999996)
+shape = SubResource("RectangleShape2D_r3kbu")
+
+[node name="Area_Swimming" type="Area2D" parent="." unique_id=1889352825]
+position = Vector2(-550, 200)
+
+[node name="Swim_Coll" type="CollisionShape2D" parent="Area_Swimming" unique_id=1234122441]
+position = Vector2(-280, 170)
+shape = SubResource("CircleShape2D_gcdwp")
+
+[node name="Area_Exit" type="Area2D" parent="." unique_id=1511443205]
+position = Vector2(761, 352)
+scale = Vector2(1.5999987, 1.5199994)
+
+[node name="Area_Coll" type="CollisionShape2D" parent="Area_Exit" unique_id=1402383937]
+position = Vector2(12.1249695, 30.27629)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_mr72c")
+
+[connection signal="input_event" from="Area_Racing" to="." method="_on_cust_input_event" binds= [0]]
+[connection signal="mouse_entered" from="Area_Racing" to="." method="_on_mouse_entered" binds= [0]]
+[connection signal="mouse_exited" from="Area_Racing" to="." method="_on_mouse_exited" binds= [0]]
+[connection signal="input_event" from="Area_Running" to="." method="_on_cust_input_event" binds= [1]]
+[connection signal="mouse_entered" from="Area_Running" to="." method="_on_mouse_entered" binds= [1]]
+[connection signal="mouse_exited" from="Area_Running" to="." method="_on_mouse_exited" binds= [1]]
+[connection signal="input_event" from="Area_Climbing" to="." method="_on_cust_input_event" binds= [2]]
+[connection signal="mouse_entered" from="Area_Climbing" to="." method="_on_mouse_entered" binds= [2]]
+[connection signal="mouse_exited" from="Area_Climbing" to="." method="_on_mouse_exited" binds= [2]]
+[connection signal="input_event" from="Area_Swimming" to="." method="_on_cust_input_event" binds= [3]]
+[connection signal="mouse_entered" from="Area_Swimming" to="." method="_on_mouse_entered" binds= [3]]
+[connection signal="mouse_exited" from="Area_Swimming" to="." method="_on_mouse_exited" binds= [3]]
+[connection signal="input_event" from="Area_Exit" to="." method="_on_cust_input_event" binds= [10]]
+[connection signal="mouse_entered" from="Area_Exit" to="." method="_on_mouse_entered" binds= [10]]
+[connection signal="mouse_exited" from="Area_Exit" to="." method="_on_mouse_exited" binds= [10]]
