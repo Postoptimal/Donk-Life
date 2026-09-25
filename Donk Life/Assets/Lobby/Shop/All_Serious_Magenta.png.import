@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdkl8affovkph"
-path="res://.godot/imported/Letter.PNG-5fa3c336b3a595016c3b23d05ea5a02e.ctex"
+uid="uid://c6s5b534lk2e"
+path="res://.godot/imported/All_Serious_Magenta.png-67fe459ec9e3c17133144ff583697168.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Home/Placeholders/Letter.PNG"
-dest_files=["res://.godot/imported/Letter.PNG-5fa3c336b3a595016c3b23d05ea5a02e.ctex"]
+source_file="res://Assets/Lobby/Shop/All_Serious_Magenta.png"
+dest_files=["res://.godot/imported/All_Serious_Magenta.png-67fe459ec9e3c17133144ff583697168.ctex"]
 
 [params]
 

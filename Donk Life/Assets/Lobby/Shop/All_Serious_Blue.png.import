@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biiqxrvxead7d"
-path="res://.godot/imported/Mountain.PNG-8c762135cb3a8170a91618c4da4739e0.ctex"
+uid="uid://hl00pqpapytr"
+path="res://.godot/imported/All_Serious_Blue.png-e3672bb3696b0381d40908ce510c4ed4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Home/Placeholders/Mountain.PNG"
-dest_files=["res://.godot/imported/Mountain.PNG-8c762135cb3a8170a91618c4da4739e0.ctex"]
+source_file="res://Assets/Lobby/Shop/All_Serious_Blue.png"
+dest_files=["res://.godot/imported/All_Serious_Blue.png-e3672bb3696b0381d40908ce510c4ed4.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7n6r65hbs6a5"
-path="res://.godot/imported/Shop.PNG-48ce67cb95b16a7c4c21f89a83f5c722.ctex"
+uid="uid://rpgahm0ilcs4"
+path="res://.godot/imported/Cosmic_Black.png-adae4fb152f79c1e7c644bc3fa0e3553.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Home/Placeholders/Shop.PNG"
-dest_files=["res://.godot/imported/Shop.PNG-48ce67cb95b16a7c4c21f89a83f5c722.ctex"]
+source_file="res://Assets/Lobby/Shop/Cosmic_Black.png"
+dest_files=["res://.godot/imported/Cosmic_Black.png-adae4fb152f79c1e7c644bc3fa0e3553.ctex"]
 
 [params]
 

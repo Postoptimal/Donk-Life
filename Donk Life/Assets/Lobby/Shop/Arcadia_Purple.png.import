@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dk3bp00bych8f"
-path="res://.godot/imported/Grass.PNG-ebd388a1744d1fbcd59bde577917de92.ctex"
+uid="uid://dthwwc3e3xwn2"
+path="res://.godot/imported/Arcadia_Purple.png-d06bf21888ec5847b20c44afefb42f27.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Home/Placeholders/Grass.PNG"
-dest_files=["res://.godot/imported/Grass.PNG-ebd388a1744d1fbcd59bde577917de92.ctex"]
+source_file="res://Assets/Lobby/Shop/Arcadia_Purple.png"
+dest_files=["res://.godot/imported/Arcadia_Purple.png-d06bf21888ec5847b20c44afefb42f27.ctex"]
 
 [params]
 

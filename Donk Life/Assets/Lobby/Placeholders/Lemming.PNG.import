@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqb1knbeocw5p"
-path="res://.godot/imported/Cloud2.PNG-c86e809f4f9f9626094cdde9be9ab8b0.ctex"
+uid="uid://md7vipor52lt"
+path="res://.godot/imported/Lemming.PNG-f1559813c1b53841973ef42ada3f4282.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Home/Placeholders/Cloud2.PNG"
-dest_files=["res://.godot/imported/Cloud2.PNG-c86e809f4f9f9626094cdde9be9ab8b0.ctex"]
+source_file="res://Assets/Lobby/Placeholders/Lemming.PNG"
+dest_files=["res://.godot/imported/Lemming.PNG-f1559813c1b53841973ef42ada3f4282.ctex"]
 
 [params]
 

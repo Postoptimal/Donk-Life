@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://s7l8mhuhn52b"
-path="res://.godot/imported/Dirt Spot.PNG-59f577e19c98c3d097137e13bac785f0.ctex"
+path="res://.godot/imported/Dirt Spot.PNG-85e577b6892eef809f0389a7239a0367.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Home/Placeholders/Dirt Spot.PNG"
-dest_files=["res://.godot/imported/Dirt Spot.PNG-59f577e19c98c3d097137e13bac785f0.ctex"]
+source_file="res://Assets/Lobby/Placeholders/Dirt Spot.PNG"
+dest_files=["res://.godot/imported/Dirt Spot.PNG-85e577b6892eef809f0389a7239a0367.ctex"]
 
 [params]
 

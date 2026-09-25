@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfvnsq8jeoept"
-path="res://.godot/imported/Sugar cubes.PNG-cb8ea91b434f2ef75a9c2ed6ec8dcf02.ctex"
+uid="uid://bq5s6inbl7nkq"
+path="res://.godot/imported/Puddle.PNG-8c41ea683f3badc759678330db1596d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Home/Placeholders/Sugar cubes.PNG"
-dest_files=["res://.godot/imported/Sugar cubes.PNG-cb8ea91b434f2ef75a9c2ed6ec8dcf02.ctex"]
+source_file="res://Assets/Lobby/Placeholders/Puddle.PNG"
+dest_files=["res://.godot/imported/Puddle.PNG-8c41ea683f3badc759678330db1596d4.ctex"]
 
 [params]
 

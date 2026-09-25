@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciuktljl6i3q7"
-path="res://.godot/imported/Pigeon.PNG-584c685e8a70388c8557dd3549793f9c.ctex"
+uid="uid://d1hfnh1vup6a1"
+path="res://.godot/imported/Cloud3.PNG-225e3d49b9b4af7a10d1436560e03478.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Home/Placeholders/Pigeon.PNG"
-dest_files=["res://.godot/imported/Pigeon.PNG-584c685e8a70388c8557dd3549793f9c.ctex"]
+source_file="res://Assets/Lobby/Placeholders/Cloud3.PNG"
+dest_files=["res://.godot/imported/Cloud3.PNG-225e3d49b9b4af7a10d1436560e03478.ctex"]
 
 [params]
 

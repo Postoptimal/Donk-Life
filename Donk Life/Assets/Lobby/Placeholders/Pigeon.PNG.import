@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd11xfun6ebyt"
-path="res://.godot/imported/Bushes.PNG-fd7612c8c5a4fdf3be3453d8ba7384d1.ctex"
+uid="uid://ciuktljl6i3q7"
+path="res://.godot/imported/Pigeon.PNG-e0e1a946d4f46c2d84fde592e5944753.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Home/Placeholders/Bushes.PNG"
-dest_files=["res://.godot/imported/Bushes.PNG-fd7612c8c5a4fdf3be3453d8ba7384d1.ctex"]
+source_file="res://Assets/Lobby/Placeholders/Pigeon.PNG"
+dest_files=["res://.godot/imported/Pigeon.PNG-e0e1a946d4f46c2d84fde592e5944753.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq5s6inbl7nkq"
-path="res://.godot/imported/Puddle.PNG-450f095bc2a3dca8214878fe8956060c.ctex"
+uid="uid://biiqxrvxead7d"
+path="res://.godot/imported/Mountain.PNG-bef73a95429d4f60d3bbee9391cf7681.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Home/Placeholders/Puddle.PNG"
-dest_files=["res://.godot/imported/Puddle.PNG-450f095bc2a3dca8214878fe8956060c.ctex"]
+source_file="res://Assets/Lobby/Placeholders/Mountain.PNG"
+dest_files=["res://.godot/imported/Mountain.PNG-bef73a95429d4f60d3bbee9391cf7681.ctex"]
 
 [params]
 

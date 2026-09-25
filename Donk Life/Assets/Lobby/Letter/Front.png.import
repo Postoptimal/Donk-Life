@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cb0f2k6dew0bx"
-path="res://.godot/imported/Roy_Mopping.PNG-d4ac6e09048f997c002d84f11d0cf282.ctex"
+uid="uid://neel3i6e10l4"
+path="res://.godot/imported/Front.png-86864e6c9024f5e18087940b79ed54d3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Home/Placeholders/Roy_Mopping.PNG"
-dest_files=["res://.godot/imported/Roy_Mopping.PNG-d4ac6e09048f997c002d84f11d0cf282.ctex"]
+source_file="res://Assets/Lobby/Letter/Front.png"
+dest_files=["res://.godot/imported/Front.png-86864e6c9024f5e18087940b79ed54d3.ctex"]
 
 [params]
 

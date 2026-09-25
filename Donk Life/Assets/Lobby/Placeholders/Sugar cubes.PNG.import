@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://md7vipor52lt"
-path="res://.godot/imported/Lemming.PNG-208f4811866ca352f9832b1f9232dc85.ctex"
+uid="uid://cfvnsq8jeoept"
+path="res://.godot/imported/Sugar cubes.PNG-5d1e724dc790f08c973e157312fe1208.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Home/Placeholders/Lemming.PNG"
-dest_files=["res://.godot/imported/Lemming.PNG-208f4811866ca352f9832b1f9232dc85.ctex"]
+source_file="res://Assets/Lobby/Placeholders/Sugar cubes.PNG"
+dest_files=["res://.godot/imported/Sugar cubes.PNG-5d1e724dc790f08c973e157312fe1208.ctex"]
 
 [params]
 
