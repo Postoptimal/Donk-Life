@@ -2,10 +2,39 @@
 
 [ext_resource type="Script" uid="uid://b6l08q1eoxtvh" path="res://Scenes/Player/player.gd" id="1_jmcll"]
 [ext_resource type="Texture2D" uid="uid://vqvya1omsegs" path="res://Assets/Player/Body.png" id="2_4wape"]
+[ext_resource type="Shader" uid="uid://cd2hkvfk6xc5g" path="res://Scenes/Player/palette_swap.tres" id="2_825xp"]
+[ext_resource type="Shader" uid="uid://bnhf5nuwsntq" path="res://Scenes/Player/outline.gdshader" id="2_fk5o5"]
+[ext_resource type="Texture2D" uid="uid://6bpkrg1fl4p5" path="res://Assets/Palettes/Green.png" id="3_0kmp4"]
 [ext_resource type="Texture2D" uid="uid://dsk68qxxr3tif" path="res://Assets/Player/Head.png" id="3_t26db"]
 [ext_resource type="Texture2D" uid="uid://chlsj1o4h5u3v" path="res://Assets/Player/Left_Leg.png" id="4_fk5o5"]
+[ext_resource type="Texture2D" uid="uid://cbax1sxehq1dd" path="res://Assets/Palettes/Default.png" id="4_i5acl"]
 [ext_resource type="Texture2D" uid="uid://betmbqnooa60i" path="res://Assets/Player/Right_Leg.png" id="5_825xp"]
 [ext_resource type="Texture2D" uid="uid://57r58u6uiuig" path="res://Assets/Player/Swimming sheet.png" id="6_4wape"]
+[ext_resource type="Texture2D" uid="uid://cf2uwtc1jj0rp" path="res://Assets/Player/Tail.png" id="6_t26db"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yk1l4"]
+shader = ExtResource("2_fk5o5")
+shader_parameter/outline_color = Color(0.05490196, 0.19215687, 0.27058825, 1)
+shader_parameter/thickness = 10.000000149012
+shader_parameter/sample_count = 16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xef34"]
+shader = ExtResource("2_825xp")
+shader_parameter/original = ExtResource("4_i5acl")
+shader_parameter/new_palette = ExtResource("3_0kmp4")
+shader_parameter/colors_count = 4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0kmp4"]
+load_path = "res://.godot/imported/Green.png-5b66a0b6509258a900a75377fd85ccba.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i5acl"]
+load_path = "res://.godot/imported/Default.png-97756f477592584ebf0bdc5eba6e410a.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4qx6x"]
+shader = ExtResource("2_825xp")
+shader_parameter/original = SubResource("CompressedTexture2D_i5acl")
+shader_parameter/new_palette = SubResource("CompressedTexture2D_0kmp4")
+shader_parameter/colors_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t26db"]
 atlas = ExtResource("6_4wape")
@@ -36,36 +65,36 @@ animations = [{
 "speed": 12.0
 }]
 
-[sub_resource type="Animation" id="Animation_jmcll"]
+[sub_resource type="Animation" id="Animation_fk5o5"]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprites/Head:position")
+tracks/0/path = NodePath("CanvasGroup/Body/Head:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(16.955, -14.335)]
+"values": [Vector2(15, -2.0000014)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprites/LeftLeg:rotation")
+tracks/1/path = NodePath("CanvasGroup/Body/Head:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [0.0]
+"values": [-0.008726646]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprites/RightLeg:rotation")
+tracks/2/path = NodePath("CanvasGroup/Body/Tail:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -77,154 +106,205 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Sprites/Body:position")
+tracks/3/path = NodePath("CanvasGroup/Body:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(0, -3)]
+"values": [Vector2(0, 0)]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprites/Head:rotation")
+tracks/4/path = NodePath("CanvasGroup/RightLeg:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.08726646]
+"values": [-0.6981317]
 }
-
-[sub_resource type="Animation" id="Animation_4wape"]
-resource_name = "idle"
-length = 2.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprites/Head:position")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(1, 1),
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("CanvasGroup/LeftLeg:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Vector2(16.955, -6.335), Vector2(16.955, -14.335)]
+"values": [-0.6981317]
 }
 
 [sub_resource type="Animation" id="Animation_t26db"]
-resource_name = "walk"
+resource_name = "idle"
+length = 4.0
 loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprites/LeftLeg:rotation")
+tracks/0/path = NodePath("CanvasGroup/Body/Head:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.25, 0.75),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [0.54105204, -0.7766715]
+"values": [Vector2(15, -2.0000014), Vector2(15, 2), Vector2(15, -2.0000014), Vector2(15, 2)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Sprites/RightLeg:rotation")
+tracks/1/path = NodePath("CanvasGroup/Body/Head:rotation")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
+"times": PackedFloat32Array(0.28, 1.25, 2.3, 3.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
-"values": [-0.54105204, 0.54105204]
+"values": [-0.10471976, -0.008726646, -0.10471976, -0.008726646]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Sprites/Body:position")
+tracks/2/path = NodePath("CanvasGroup/Body/Tail:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.54, 1.57, 1.67, 1.8, 1.9, 2.1, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.19198622, -0.67718774, 0.53232545, -0.51138145, 0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_825xp"]
+resource_name = "run"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasGroup/Body:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.34, 0.97),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasGroup/RightLeg:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.6981317, 0.6981317]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CanvasGroup/LeftLeg:rotation")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0.27, 1),
+"times": PackedFloat32Array(0.13333334, 0.6333333),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, -3), Vector2(0, 3)]
+"values": [-0.6981317, 0.6981317]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Sprites/Head:position")
+tracks/3/path = NodePath("CanvasGroup/Body/Tail:rotation")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0.27, 1),
+"times": PackedFloat32Array(0, 0.5),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(16.955002, -9.335007), Vector2(16.955002, -3.3350067)]
+"values": [0.0, 0.37524578]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Sprites/Head:rotation")
+tracks/4/path = NodePath("CanvasGroup/Body/Head:rotation")
 tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.67),
+"times": PackedFloat32Array(0.36666664, 0.76666665),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [0.08726646, -0.08726646]
+"values": [-0.08594526, 0.06283186]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fk5o5"]
 _data = {
-&"RESET": SubResource("Animation_jmcll"),
-&"idle": SubResource("Animation_4wape"),
-&"walk": SubResource("Animation_t26db")
+&"RESET": SubResource("Animation_fk5o5"),
+&"idle": SubResource("Animation_t26db"),
+&"run": SubResource("Animation_825xp")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_t2dwb"]
 radius = 43.0
 
-[node name="Player" type="CharacterBody2D" unique_id=571231792 node_paths=PackedStringArray("sprites", "anim_player")]
+[node name="Player" type="CharacterBody2D" unique_id=571231792]
 script = ExtResource("1_jmcll")
-sprites = NodePath("Sprites")
-anim_player = NodePath("AnimationPlayer")
 
-[node name="Sprites" type="Node2D" parent="." unique_id=2038078349]
+[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=1635307690]
+material = SubResource("ShaderMaterial_yk1l4")
 
-[node name="Body" type="Sprite2D" parent="Sprites" unique_id=675494364]
-position = Vector2(0, -3)
+[node name="Body" type="Sprite2D" parent="CanvasGroup" unique_id=675494364]
+material = SubResource("ShaderMaterial_xef34")
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_4wape")
 offset = Vector2(8.095, -55.035)
 
-[node name="RightLeg" type="Sprite2D" parent="Sprites" unique_id=462054135]
-position = Vector2(24.09, 8.475)
-texture = ExtResource("5_825xp")
-offset = Vector2(-11.99, -67.49)
-
-[node name="LeftLeg" type="Sprite2D" parent="Sprites" unique_id=717920678]
-position = Vector2(-21.677773, 13.783345)
+[node name="Tail" type="Sprite2D" parent="CanvasGroup/Body" unique_id=1554141808]
+use_parent_material = true
+position = Vector2(-214.99998, 89.999985)
 scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("4_fk5o5")
-offset = Vector2(25.814167, -70.60168)
+texture = ExtResource("6_t26db")
+offset = Vector2(218, -140)
 
-[node name="Head" type="Sprite2D" parent="Sprites" unique_id=1655427570]
-position = Vector2(16.955, -14.335)
-rotation = -0.08726646
+[node name="Head" type="Sprite2D" parent="CanvasGroup/Body" unique_id=1655427570]
+use_parent_material = true
+position = Vector2(15, -2.0000014)
+rotation = -0.008726646
+scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("3_t26db")
-offset = Vector2(-8.135, -40.77)
+offset = Vector2(-22.485888, -61.44438)
 
-[node name="Swim" type="AnimatedSprite2D" parent="Sprites" unique_id=1489140566]
-position = Vector2(6.000001, -30.000002)
+[node name="RightLeg" type="Sprite2D" parent="CanvasGroup" unique_id=462054135]
+position = Vector2(12, 26)
+rotation = -0.6981317
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_825xp")
+offset = Vector2(-32.9, -190.015)
+
+[node name="LeftLeg" type="Sprite2D" parent="CanvasGroup" unique_id=717920678]
+position = Vector2(-31, 27)
+rotation = -0.6981317
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_fk5o5")
+offset = Vector2(150.1364, -193.81833)
+
+[node name="Swim" type="AnimatedSprite2D" parent="CanvasGroup" unique_id=1489140566]
+visible = false
+material = SubResource("ShaderMaterial_4qx6x")
+position = Vector2(-20.000004, 28)
 scale = Vector2(0.23849995, 0.19349995)
 sprite_frames = SubResource("SpriteFrames_xef34")
 autoplay = "default"
-frame_progress = 0.7057971
+frame_progress = 0.46648315
+offset = Vector2(79.66458, -253.23004)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1807590844]
 libraries/ = SubResource("AnimationLibrary_fk5o5")
