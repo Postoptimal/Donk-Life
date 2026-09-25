@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd8ntb1f0yq27"
-path="res://.godot/imported/Middle.png-da6830181eceda2ee0c4570e79518c6c.ctex"
+uid="uid://d4mgagryc2lxk"
+path="res://.godot/imported/1.png-92eef9514ee9c35deb0286fe20edc6bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Climbing/Middle.png"
-dest_files=["res://.godot/imported/Middle.png-da6830181eceda2ee0c4570e79518c6c.ctex"]
+source_file="res://Assets/Climbing/1.png"
+dest_files=["res://.godot/imported/1.png-92eef9514ee9c35deb0286fe20edc6bb.ctex"]
 
 [params]
 
