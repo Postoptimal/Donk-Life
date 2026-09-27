@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://qn08inndbqxo"]
+[gd_scene format=3 uid="uid://jo11i74k7bv"]
 
 [ext_resource type="Script" uid="uid://rltaed3bfhte" path="res://Scenes/Levels/lobby.gd" id="1_sal5b"]
 [ext_resource type="Texture2D" uid="uid://c0f18ht23bhi4" path="res://Assets/Lobby/Placeholders/Sky.PNG" id="2_8c0ee"]
