@@ -15,12 +15,14 @@ var racism:      int
 
 # Scene Swapping
 var target_scene: String
-var scene: PackedScene = preload("res://Scenes/Transition/UIS_trans.tscn")
+var scene: PackedScene = preload("uid://bjw5yg0uqdqnr") #trans.tscn uid
 
-func loadscene(ScenePath: String) -> void:
-	var loader = scene.instantiate()
-	target_scene = ScenePath
-	get_tree().root.add_child(loader)
+func loadscene(SceneUID: String) -> void:
+	var packed_scene = load(SceneUID)
+	if packed_scene:
+		var loader = scene.instantiate()
+		target_scene = SceneUID
+		get_tree().root.add_child(loader)
 	
 func boot_config() -> void:
 	if FileAccess.file_exists("user://player.cfg"):
