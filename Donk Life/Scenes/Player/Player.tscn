@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://vqvya1omsegs" path="res://Assets/Player/Body.png" id="2_4wape"]
 [ext_resource type="Shader" uid="uid://cd2hkvfk6xc5g" path="res://Scenes/Player/palette_swap.tres" id="2_825xp"]
 [ext_resource type="Shader" uid="uid://bnhf5nuwsntq" path="res://Scenes/Player/outline.gdshader" id="2_fk5o5"]
+[ext_resource type="Texture2D" uid="uid://de1d8woqh8wdg" path="res://Assets/Palettes/Ass blue.png" id="3_i5acl"]
 [ext_resource type="Texture2D" uid="uid://dsk68qxxr3tif" path="res://Assets/Player/Head.png" id="3_t26db"]
 [ext_resource type="Texture2D" uid="uid://chlsj1o4h5u3v" path="res://Assets/Player/Left_Leg.png" id="4_fk5o5"]
 [ext_resource type="Texture2D" uid="uid://cbax1sxehq1dd" path="res://Assets/Palettes/Default.png" id="4_i5acl"]
@@ -11,6 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://bd2yc2xatqng7" path="res://Assets/Palettes/Red.png" id="6_0kmp4"]
 [ext_resource type="Texture2D" uid="uid://57r58u6uiuig" path="res://Assets/Player/Swimming sheet.png" id="6_4wape"]
 [ext_resource type="Texture2D" uid="uid://cf2uwtc1jj0rp" path="res://Assets/Player/Tail.png" id="6_t26db"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w51f7"]
+shader = ExtResource("2_825xp")
+shader_parameter/original = ExtResource("4_i5acl")
+shader_parameter/new_palette = ExtResource("3_i5acl")
+shader_parameter/colors_count = 4
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yk1l4"]
 shader = ExtResource("2_fk5o5")
@@ -70,7 +77,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasGroup/Body/Head:position")
+tracks/0/path = NodePath("Sprite/CanvasGroup/Body/Head:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -82,7 +89,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasGroup/Body/Head:rotation")
+tracks/1/path = NodePath("Sprite/CanvasGroup/Body/Head:rotation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -94,7 +101,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasGroup/Body/Tail:rotation")
+tracks/2/path = NodePath("Sprite/CanvasGroup/Body/Tail:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -106,7 +113,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("CanvasGroup/Body:position")
+tracks/3/path = NodePath("Sprite/CanvasGroup/Body:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -118,26 +125,26 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("CanvasGroup/RightLeg:rotation")
+tracks/4/path = NodePath("Sprite/CanvasGroup/RightLeg:rotation")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.6981317]
+"values": [0.0]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("CanvasGroup/LeftLeg:rotation")
+tracks/5/path = NodePath("Sprite/CanvasGroup/LeftLeg:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [-0.6981317]
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_t26db"]
@@ -147,7 +154,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasGroup/Body/Head:position")
+tracks/0/path = NodePath("Sprite/CanvasGroup/Body/Head:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -159,7 +166,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasGroup/Body/Head:rotation")
+tracks/1/path = NodePath("Sprite/CanvasGroup/Body/Head:rotation")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -171,7 +178,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasGroup/Body/Tail:rotation")
+tracks/2/path = NodePath("Sprite/CanvasGroup/Body/Tail:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -187,7 +194,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasGroup/Body:position")
+tracks/0/path = NodePath("Sprite/CanvasGroup/Body:position")
 tracks/0/interp = 2
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -199,7 +206,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasGroup/RightLeg:rotation")
+tracks/1/path = NodePath("Sprite/CanvasGroup/RightLeg:rotation")
 tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -211,7 +218,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("CanvasGroup/LeftLeg:rotation")
+tracks/2/path = NodePath("Sprite/CanvasGroup/LeftLeg:rotation")
 tracks/2/interp = 2
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -223,7 +230,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("CanvasGroup/Body/Tail:rotation")
+tracks/3/path = NodePath("Sprite/CanvasGroup/Body/Tail:rotation")
 tracks/3/interp = 2
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -235,7 +242,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("CanvasGroup/Body/Head:rotation")
+tracks/4/path = NodePath("Sprite/CanvasGroup/Body/Head:rotation")
 tracks/4/interp = 2
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -258,23 +265,28 @@ radius = 43.0
 [node name="Player" type="CharacterBody2D" unique_id=571231792]
 script = ExtResource("1_jmcll")
 
-[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=1635307690]
-material = SubResource("ShaderMaterial_yk1l4")
+[node name="Sprite" type="Node2D" parent="." unique_id=948178972]
+material = SubResource("ShaderMaterial_w51f7")
 
-[node name="Body" type="Sprite2D" parent="CanvasGroup" unique_id=675494364]
+[node name="CanvasGroup" type="CanvasGroup" parent="Sprite" unique_id=1635307690]
+material = SubResource("ShaderMaterial_yk1l4")
+use_parent_material = true
+
+[node name="Body" type="Sprite2D" parent="Sprite/CanvasGroup" unique_id=675494364]
 material = SubResource("ShaderMaterial_r3plo")
+use_parent_material = true
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("2_4wape")
 offset = Vector2(8.095, -55.035)
 
-[node name="Tail" type="Sprite2D" parent="CanvasGroup/Body" unique_id=1554141808]
+[node name="Tail" type="Sprite2D" parent="Sprite/CanvasGroup/Body" unique_id=1554141808]
 use_parent_material = true
 position = Vector2(-214.99998, 89.999985)
 scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("6_t26db")
 offset = Vector2(218, -140)
 
-[node name="Head" type="Sprite2D" parent="CanvasGroup/Body" unique_id=1655427570]
+[node name="Head" type="Sprite2D" parent="Sprite/CanvasGroup/Body" unique_id=1655427570]
 use_parent_material = true
 position = Vector2(15, -2.0000014)
 rotation = -0.008726646
@@ -282,23 +294,24 @@ scale = Vector2(0.99999994, 0.99999994)
 texture = ExtResource("3_t26db")
 offset = Vector2(-22.485888, -61.44438)
 
-[node name="RightLeg" type="Sprite2D" parent="CanvasGroup" unique_id=462054135]
+[node name="RightLeg" type="Sprite2D" parent="Sprite/CanvasGroup" unique_id=462054135]
+use_parent_material = true
 position = Vector2(12, 26)
-rotation = -0.6981317
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("5_825xp")
 offset = Vector2(-32.9, -190.015)
 
-[node name="LeftLeg" type="Sprite2D" parent="CanvasGroup" unique_id=717920678]
+[node name="LeftLeg" type="Sprite2D" parent="Sprite/CanvasGroup" unique_id=717920678]
+use_parent_material = true
 position = Vector2(-31, 27)
-rotation = -0.6981317
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_fk5o5")
 offset = Vector2(150.1364, -193.81833)
 
-[node name="Swim" type="AnimatedSprite2D" parent="CanvasGroup" unique_id=1489140566]
+[node name="Swim" type="AnimatedSprite2D" parent="Sprite/CanvasGroup" unique_id=1489140566]
 visible = false
 material = SubResource("ShaderMaterial_4qx6x")
+use_parent_material = true
 position = Vector2(-20.000004, 28)
 scale = Vector2(0.23849995, 0.19349995)
 sprite_frames = SubResource("SpriteFrames_xef34")
