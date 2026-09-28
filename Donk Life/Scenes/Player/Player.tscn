@@ -324,5 +324,5 @@ libraries/ = SubResource("AnimationLibrary_fk5o5")
 autoplay = &"idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1394246740]
-visible = false
 shape = SubResource("CircleShape2D_t2dwb")
+debug_color = Color(0.8768931, 0.3260766, 0.278143, 0.41960785)
