@@ -29,12 +29,14 @@ scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_cvhe1")
 
 [node name="Grass" type="Sprite2D" parent="." unique_id=165438506]
-position = Vector2(960, 744)
+position = Vector2(960, 800)
 texture = ExtResource("3_cbp5q")
 
 [node name="Player" parent="." unique_id=571231792 instance=ExtResource("4_vfllk")]
 position = Vector2(159, 740)
 player_mode = 1
-gravity = 70.0
-jump_strength = 1.7
-surface_range_y = 50.0
+GRAVITY = 600.0
+jump_strength = 0.7
+dive_strength = 0.3
+WATER_DRAG = 0.0
+surface_range_y = 100.0
