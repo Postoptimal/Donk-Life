@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+@onready var swimming_animation: AnimatedSprite2D = $Sprite/CanvasGroup/Swim
+
 # Mode selection
 enum PlayerMode {RACING, SWIMMING, RUNNING, CLIMBING}
 @export var player_mode: PlayerMode
@@ -75,10 +77,13 @@ func swim_dive() -> void:
 
 # MAIN
 func _ready() -> void:
-	pass
+	swimming_animation.hide()
 
 func _process(_delta: float) -> void:
-	pass
+	if swim_state == SwimState.SURFACE:
+		swimming_animation.show()
+	else:
+		swimming_animation.hide()
 
 func _physics_process(_delta: float) -> void:
 	match player_mode:

@@ -2,7 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://c0f18ht23bhi4" path="res://Assets/Lobby/Placeholders/Sky.PNG" id="1_5lyys"]
 [ext_resource type="Texture2D" uid="uid://0yv48splf33e" path="res://Assets/Lobby/Placeholders/Cloud1.PNG" id="2_cvhe1"]
-[ext_resource type="Texture2D" uid="uid://dk3bp00bych8f" path="res://Assets/Lobby/Placeholders/Grass.PNG" id="3_cbp5q"]
+[ext_resource type="Texture2D" uid="uid://dydx3kk2gh1g5" path="res://Assets/Background_grass.PNG" id="3_cvhe1"]
+[ext_resource type="Texture2D" uid="uid://btxb0nm4t3isd" path="res://Assets/Swimming/Water.png" id="4_cbp5q"]
 [ext_resource type="PackedScene" uid="uid://c80xd5gmsmy1u" path="res://Scenes/Player/Player.tscn" id="4_vfllk"]
 
 [node name="SwimmingMinigame" type="Node2D" unique_id=1038212512]
@@ -30,10 +31,14 @@ texture = ExtResource("2_cvhe1")
 
 [node name="Grass" type="Sprite2D" parent="." unique_id=165438506]
 position = Vector2(960, 744)
-texture = ExtResource("3_cbp5q")
+texture = ExtResource("3_cvhe1")
+
+[node name="Water" type="Sprite2D" parent="." unique_id=1337028664]
+position = Vector2(960, 1250)
+texture = ExtResource("4_cbp5q")
 
 [node name="Player" parent="." unique_id=571231792 instance=ExtResource("4_vfllk")]
-position = Vector2(159, 740)
+position = Vector2(166, 696)
 player_mode = 1
 gravity = 70.0
 jump_strength = 1.7

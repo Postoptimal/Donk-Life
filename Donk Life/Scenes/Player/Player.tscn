@@ -22,7 +22,7 @@ shader_parameter/colors_count = 4
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yk1l4"]
 shader = ExtResource("2_fk5o5")
 shader_parameter/outline_color = Color(0.05490196, 0.19215687, 0.27058825, 1)
-shader_parameter/thickness = 10.000000149012
+shader_parameter/thickness = 5.000000074506
 shader_parameter/sample_count = 16
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r3plo"]
@@ -309,7 +309,6 @@ texture = ExtResource("4_fk5o5")
 offset = Vector2(150.1364, -193.81833)
 
 [node name="Swim" type="AnimatedSprite2D" parent="Sprite/CanvasGroup" unique_id=1489140566]
-visible = false
 material = SubResource("ShaderMaterial_4qx6x")
 use_parent_material = true
 position = Vector2(-20.000004, 28)
