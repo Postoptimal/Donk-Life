@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://hjswwggke04k" path="res://Scenes/Levels/running.gd" id="1_6uh5e"]
 [ext_resource type="FontFile" uid="uid://isx50xagv0q4" path="res://Assets/child-hood.regular.otf" id="2_3kprs"]
+[ext_resource type="Texture2D" uid="uid://d4mgagryc2lxk" path="res://Assets/Climbing/1.png" id="2_8s2ey"]
+[ext_resource type="Script" uid="uid://bl2712k0sdwro" path="res://Scenes/Levels/climbing_scroll.gd" id="3_r3xfo"]
+[ext_resource type="PackedScene" uid="uid://c80xd5gmsmy1u" path="res://Scenes/Player/Player.tscn" id="4_8s2ey"]
 
 [node name="Climbing" type="Node2D" unique_id=1761791514]
 script = ExtResource("1_6uh5e")
@@ -15,6 +18,23 @@ offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.5902121, 0.7310434, 0.9234879, 1)
+
+[node name="1" type="Sprite2D" parent="." unique_id=1278213713]
+position = Vector2(959, -1403)
+texture = ExtResource("2_8s2ey")
+script = ExtResource("3_r3xfo")
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="1" unique_id=726010125]
+remote_path = NodePath("../../AnimatableBody2D")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="." unique_id=1529733762]
+position = Vector2(959, -1403)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="AnimatableBody2D" unique_id=1605307130]
+polygon = PackedVector2Array(-102.70001, -1956.6, -123, -2122, -123, -2160, -960, -2160, -960, 2160, -122.70001, 2160, -127, 2007.7002, -127, 2000, -255.40002, 1807.8999, -228.70001, 1782.6001, -136, 1776.3, -136, 1755.2, -221, 1707.1001, -221, 1703.7, -408.09998, 1669, -410.09998, 1669, -472.1, 1629, -577.1, 1505.5, -667.5, 1325.5, -686, 1246.6001, -686, 1103.8, -673, 1047.1001, -673, 1045.3999, -612.9, 929, -608.1, 929, -606, 752.1001, -606, 745.30005, -640, 650.19995, -640, 644, -793.8, 561.30005, -824.8, 521.8999, -843, 467.30005, -843, 443.6001, -826.3, 393.19995, -797.1, 362.19995, -744.9, 344.1001, -686.2, 346, -676.1, 346, -653, 152.6001, -653, 150.3999, -589.2, 27.600098, -504.3, -46.19995, -340.2, -144, -336.40002, -144, -286.40002, -203, -279.90002, -203, -281, -297.09998, -281, -302.59998, -393.90002, -504.90002, -420, -592.80005, -419, -675.9, -353, -779.1, -353, -780.1, -311.5, -824.4, -255.20001, -849.19995, -160.09998, -865.9, 50.900024, -862, 59.900024, -862, 105.80005, -880, 111.5, -880, 127.5, -905, 137.40002, -905, 117, -959.9, 117, -964, 70, -1014, 70, -1017, -148, -1133.2, -187, -1196.7, -176.40002, -1236.6, -139.90002, -1274, -59, -1303.3, 63.5, -1309, 72.5, -1309, 100.5, -1372, 105.900024, -1372, 96, -1491.8, 96, -1498.2, 63, -1629.3, 63, -1633.8, 11, -1769.8, 11, -1772.8)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="AnimatableBody2D" unique_id=2108785453]
+polygon = PackedVector2Array(960, -2160, 125, -2160, 125, -2151, 126, -2032.9, 126, -2027.1, 238.69995, -1849.2, 290, -1722.1, 290, -1718.9, 344.19995, -1639.4, 240, -1572.5, 240, -1549, 383.80005, -1549, 403.19995, -1492.9, 414, -1262.5, 414, -1240.9, 361, -647.4, 361, -642.6, 313.90002, -485.5, 209, -347.40002, 209, -345.90002, 107, -235.90002, -208.79999, 50, -210.59998, 50, -323.59998, 181, -325.5, 181, -394.5, 291, -398.7, 291, -416, 416.30005, -416, 429.8999, -366.2, 712.8999, -369, 864.8999, -369, 874.80005, -412.09998, 1071, -415, 1071, -415, 1152.8999, -459.4, 1200, -463.4, 1200, -499, 1315.5, -499, 1337.5, -473.1, 1349, -464.2, 1349, -411.3, 1283.2, -364.5, 1259, -253, 1407.3, -253, 1409.8999, -13.400024, 1672, 55.599976, 1776.5, 118.5, 1934.3, 129.80005, 1987, 125, 2150.9, 125, 2160, 960, 2160)
 
 [node name="Button" type="Button" parent="." unique_id=773296883]
 offset_left = 125.0
@@ -32,5 +52,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_3kprs")
 theme_override_font_sizes/font_size = 69
 text = "THIS IS THE CLIMBING MINIGAME LOL."
+
+[node name="Player" parent="." unique_id=571231792 instance=ExtResource("4_8s2ey")]
+position = Vector2(943, 684)
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
