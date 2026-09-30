@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+# Nodes
+@onready var label: Label = $"../Label" # temporary
+
+
 # Mode selection
 enum PlayerMode {RACING, SWIMMING, RUNNING, CLIMBING}
 @export var player_mode: PlayerMode
@@ -18,22 +22,22 @@ var acceleration: Vector2 = Vector2.ZERO ## Results in changes in velocity (this
 
 # SWIMMING Mode
 @export_group("Swimming")
+@export var SWIM_COOLDOWN: float = 1.5 ## Max detection cooldown after jumping or diving
 @export var jump_strength: float = 1
 @export var dive_strength: float = 1
 @export var swim_speed: float = 1 # horizontal
-@export var WATER_DRAG: float = 10 ## Proportionality constant for deceleration in water (a = -k * v^2)
-@export_range(0.0, 1.0, 0.05) var BUOYANCY_RATIO: float = 0.5 ## Proportionality constant for buoyant force (F = -k * g)
-var swim_state: int = SwimState.SURFACE
-var check_hitting_ground: bool = false
+@export_range(0.0, 1.0, 0.01) var BUOYANCY_RATIO: float = 0.5 ## Proportionality constant for buoyant force (F = -k * g)
+var swim_state: int = SwimState.SURFACE ## Stores whether player is underwater, on the surface or in the sky
+var swim_cooldown_timer: float = 0 ## Prevent detection for short period after jumping or diving
 
-@export_subgroup("On Surface?")
-## What y value is considered "on the surface"
-@export var surface_y: float = 750
+@export_subgroup("Checking If On Surface")
+@export var surface_y: float = 750 ## What y value is considered "on the surface"
 @export var surface_range_y: float = 20
 enum SwimState {SKY, SURFACE, UNDERWATER}
 
 ## All the required code for when the player is in the mode SWIMMING.
 func swim_controls() -> void:
+	label.text = "%.2f" % swim_cooldown_timer
 	update_swim_state()
 	swim_horizontal_movement()
 	swim_jump()
@@ -43,6 +47,10 @@ func swim_controls() -> void:
 	print(
 		"Velocity: " + str(velocity.y) + "\tHeight: " + str(global_position.y) + "\tAcceleration: " + str(acceleration.y)
 	)
+	
+	# cooldown timer
+	if swim_cooldown_timer > 0:
+		swim_cooldown_timer -= get_physics_process_delta_time()
 
 ## Updates whether player is in SKY, SURFACE, or UNDERWATER
 func update_swim_state() -> void:
@@ -63,25 +71,29 @@ func swim_jump() -> void:
 	var input_jump: float = Input.is_action_just_pressed("jump")
 
 	# Jump only if on surface
-	if input_jump and swim_state == SwimState.SURFACE:
+	if input_jump and swim_state == SwimState.SURFACE and swim_cooldown_timer <= 0:
 		velocity.y = -1 * jump_strength * 1000
-		check_hitting_ground = false
+		swim_cooldown_timer = SWIM_COOLDOWN
 
 ## Dive when the right button is pressed and the player is on the surface
 func swim_dive() -> void:
 	var input_dive: float = Input.is_action_just_pressed("move_down")
 	
 	# Dive only if on surface
-	if input_dive and swim_state == SwimState.SURFACE:
+	if input_dive and swim_state == SwimState.SURFACE and swim_cooldown_timer <= 0:
 		velocity.y = dive_strength * 1000
-		check_hitting_ground = false
+		swim_cooldown_timer = SWIM_COOLDOWN
 
-## Calculate acceleration for each swim state
+## Calculate acceleration for each swim state (and set velocity to zero after cooldown finishes)
 func swim_forces() -> void:
 	match swim_state:
 		SwimState.SKY: acceleration.y = GRAVITY
-		SwimState.UNDERWATER: acceleration.y = -1 * (WATER_DRAG * abs(velocity.y) * velocity.y + BUOYANCY_RATIO * GRAVITY)
-		SwimState.SURFACE: acceleration.y = 0
+		SwimState.UNDERWATER: acceleration.y = -1 * BUOYANCY_RATIO * GRAVITY
+		SwimState.SURFACE:
+			if swim_cooldown_timer <= 0:
+				velocity.y = 0
+				global_position.y = surface_y
+			acceleration.y = 0
 
 # RUNNING Mode
 @export_group("Running")
@@ -98,6 +110,7 @@ func swim_forces() -> void:
 # MAIN
 func _ready() -> void:
 	global_position = init_global_pos
+	swim_cooldown_timer = 0
 
 func _process(_delta: float) -> void:
 	pass
