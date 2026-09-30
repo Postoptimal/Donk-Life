@@ -1,7 +1,8 @@
-extends CharacterBody2D
+class_name Player extends CharacterBody2D
 
 # Nodes
-@onready var label: Label = $"../Label" # temporary
+@onready var cooldown_label: Label = $"../CooldownLabel" # temporary
+@onready var player_label: Label = $"../PlayerLabel" # also temporary
 
 
 # Mode selection
@@ -22,7 +23,7 @@ var acceleration: Vector2 = Vector2.ZERO ## Results in changes in velocity (this
 
 # SWIMMING Mode
 @export_group("Swimming")
-@export var SWIM_COOLDOWN: float = 1.5 ## Max detection cooldown after jumping or diving
+@export var SWIM_COOLDOWN: float = 0.5 ## Max detection cooldown after jumping or diving
 @export var jump_strength: float = 1
 @export var dive_strength: float = 1
 @export var swim_speed: float = 1 # horizontal
@@ -37,16 +38,17 @@ enum SwimState {SKY, SURFACE, UNDERWATER}
 
 ## All the required code for when the player is in the mode SWIMMING.
 func swim_controls() -> void:
-	label.text = "%.2f" % swim_cooldown_timer
+	cooldown_label.text = "%.2f" % swim_cooldown_timer
 	update_swim_state()
 	swim_horizontal_movement()
 	swim_jump()
 	swim_dive()
 	swim_forces()
 	
-	print(
-		"Velocity: " + str(velocity.y) + "\tHeight: " + str(global_position.y) + "\tAcceleration: " + str(acceleration.y)
-	)
+	var player_label_dict = {"h": global_position.y, "v": velocity.y, "a": acceleration.y}
+	player_label.text = """Height: {h}
+	Velocity: {v}
+	Acceleration: {a}""".format(player_label_dict)
 	
 	# cooldown timer
 	if swim_cooldown_timer > 0:

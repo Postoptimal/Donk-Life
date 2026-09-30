@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bo5yl1cvb31ta"]
+
+[ext_resource type="Script" uid="uid://dhfkvoqcflecj" path="res://Scenes/Levels/Swimming/swim_obstacle.gd" id="1_y7ogc"]
+[ext_resource type="Texture2D" uid="uid://biiqxrvxead7d" path="res://Assets/Lobby/Placeholders/Mountain.PNG" id="2_558eo"]
+
+[node name="SwimObstacle2" type="StaticBody2D" unique_id=668432482]
+collision_mask = 7
+script = ExtResource("1_y7ogc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=559021534]
+position = Vector2(-18.660004, -244.41003)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("2_558eo")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." unique_id=310869900]
+position = Vector2(-15.660004, -258.41003)
+scale = Vector2(1.3, 1.3)
+polygon = PackedVector2Array(-151, 249, -145, 150, -80, -110, -4, -230, 93, -92, 132, 66, 185, 251)
