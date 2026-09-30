@@ -28,13 +28,25 @@ position = Vector2(1495, 368)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_cvhe1")
 
-[node name="Grass" type="Sprite2D" parent="." unique_id=165438506]
-position = Vector2(960, 744)
+[node name="WaterSurface" type="Sprite2D" parent="." unique_id=165438506]
+position = Vector2(960, 550)
 texture = ExtResource("3_cbp5q")
 
 [node name="Player" parent="." unique_id=571231792 instance=ExtResource("4_vfllk")]
-position = Vector2(159, 740)
+position = Vector2(250, 495)
 player_mode = 1
-gravity = 70.0
-jump_strength = 1.7
+GRAVITY = 981.0
+init_global_pos = Vector2(160, 495)
+SWIM_COOLDOWN = 0.5
+jump_strength = 0.9
+dive_strength = 0.7
+surface_y = 495.0
 surface_range_y = 50.0
+
+[node name="Label" type="Label" parent="." unique_id=2046782242]
+offset_left = 1770.0
+offset_top = 42.0
+offset_right = 1877.0
+offset_bottom = 111.0
+theme_override_font_sizes/font_size = 50
+text = "X.XX"
