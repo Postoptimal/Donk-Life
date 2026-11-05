@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bjw5yg0uqdqnr"]
 
-[ext_resource type="Script" uid="uid://dia4wnmswadnw" path="res://Scenes/Transition/trans.gd" id="1_17e4v"]
-[ext_resource type="Shader" uid="uid://d14ytxqtmqqjo" path="res://Assets/transition.gdshader" id="1_rnsa8"]
+[ext_resource type="Script" uid="uid://dia4wnmswadnw" path="res://Scenes/Transition/UIS_trans.gd" id="1_17e4v"]
+[ext_resource type="Shader" uid="uid://d14ytxqtmqqjo" path="res://Assets/transition.gdshader" id="2_jfbsm"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_17e4v"]
-shader = ExtResource("1_rnsa8")
+shader = ExtResource("2_jfbsm")
 shader_parameter/use_sprite_alpha = true
 shader_parameter/use_transition_texture = false
 shader_parameter/transition_type = 2
