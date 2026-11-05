@@ -1,0 +1,444 @@
+[gd_scene format=3 uid="uid://c4iq6kk17dfq1"]
+
+[ext_resource type="Script" uid="uid://bs1v2tye7r6n0" path="res://Scenes/Splash/UIS_splash.gd" id="1_tnp2k"]
+[ext_resource type="FontFile" uid="uid://bntnxpe8bqmcj" path="res://Assets/DarumadropOne-Regular.ttf" id="2_k6oqu"]
+[ext_resource type="Shader" uid="uid://cd2hkvfk6xc5g" path="res://Scenes/Player/palette_swap.tres" id="5_t6gwm"]
+[ext_resource type="Texture2D" uid="uid://cbax1sxehq1dd" path="res://Assets/Palettes/Default.png" id="7_lefyl"]
+[ext_resource type="Texture2D" uid="uid://dj3hubisrnbe7" path="res://Assets/Palettes/Ass green.png" id="7_nmto2"]
+[ext_resource type="Shader" uid="uid://bnhf5nuwsntq" path="res://Scenes/Player/outline.gdshader" id="8_fg34o"]
+[ext_resource type="Texture2D" uid="uid://bd2yc2xatqng7" path="res://Assets/Palettes/Red.png" id="9_08nls"]
+[ext_resource type="Texture2D" uid="uid://vqvya1omsegs" path="res://Assets/Player/Body.png" id="10_ecv0o"]
+[ext_resource type="Texture2D" uid="uid://cf2uwtc1jj0rp" path="res://Assets/Player/Tail.png" id="11_hpp27"]
+[ext_resource type="Texture2D" uid="uid://dsk68qxxr3tif" path="res://Assets/Player/Head.png" id="12_32qyb"]
+[ext_resource type="Texture2D" uid="uid://betmbqnooa60i" path="res://Assets/Player/Right_Leg.png" id="13_cvn5t"]
+[ext_resource type="Texture2D" uid="uid://0yv48splf33e" path="res://Assets/Lobby/Placeholders/Cloud1.PNG" id="14_nmto2"]
+[ext_resource type="Texture2D" uid="uid://chlsj1o4h5u3v" path="res://Assets/Player/Left_Leg.png" id="14_xvl0a"]
+[ext_resource type="Texture2D" uid="uid://57r58u6uiuig" path="res://Assets/Player/Swimming sheet.png" id="15_8ccdv"]
+[ext_resource type="Texture2D" uid="uid://cfvnsq8jeoept" path="res://Assets/Lobby/Placeholders/Sugar cubes.PNG" id="15_jvjdf"]
+[ext_resource type="Texture2D" uid="uid://bqb1knbeocw5p" path="res://Assets/Lobby/Placeholders/Cloud2.PNG" id="15_t6gwm"]
+[ext_resource type="Texture2D" uid="uid://cb0f2k6dew0bx" path="res://Assets/Lobby/Placeholders/Roy_Mopping.PNG" id="17_mag26"]
+[ext_resource type="PackedScene" uid="uid://dtfucc3b18711" path="res://Scenes/Splash/UIS_presentation.tscn" id="18_mag26"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w51f7"]
+shader = ExtResource("5_t6gwm")
+shader_parameter/original = ExtResource("7_lefyl")
+shader_parameter/new_palette = ExtResource("7_nmto2")
+shader_parameter/colors_count = 4
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_yk1l4"]
+shader = ExtResource("8_fg34o")
+shader_parameter/outline_color = Color(0.05490196, 0.19215687, 0.27058825, 1)
+shader_parameter/thickness = 10.000000149012
+shader_parameter/sample_count = 16
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_r3plo"]
+shader = ExtResource("5_t6gwm")
+shader_parameter/original = ExtResource("7_lefyl")
+shader_parameter/new_palette = ExtResource("9_08nls")
+shader_parameter/colors_count = 4
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0kmp4"]
+load_path = "res://.godot/imported/Green.png-5b66a0b6509258a900a75377fd85ccba.ctex"
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_i5acl"]
+load_path = "res://.godot/imported/Default.png-97756f477592584ebf0bdc5eba6e410a.ctex"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4qx6x"]
+shader = ExtResource("5_t6gwm")
+shader_parameter/original = SubResource("CompressedTexture2D_i5acl")
+shader_parameter/new_palette = SubResource("CompressedTexture2D_0kmp4")
+shader_parameter/colors_count = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t26db"]
+atlas = ExtResource("15_8ccdv")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fk5o5"]
+atlas = ExtResource("15_8ccdv")
+region = Rect2(1000, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_825xp"]
+atlas = ExtResource("15_8ccdv")
+region = Rect2(0, 1000, 1000, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xef34"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t26db")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fk5o5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_825xp")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="Animation" id="Animation_fk5o5"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/CanvasGroup/Body/Head:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(15, -2.0000014)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite/CanvasGroup/Body/Head:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.008726646]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/CanvasGroup/Body/Tail:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite/CanvasGroup/Body:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite/CanvasGroup/RightLeg:rotation")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Sprite/CanvasGroup/LeftLeg:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_t26db"]
+resource_name = "idle"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/CanvasGroup/Body/Head:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(15, -2.0000014), Vector2(15, 2), Vector2(15, -2.0000014), Vector2(15, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite/CanvasGroup/Body/Head:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.28, 1.25, 2.3, 3.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.10471976, -0.008726646, -0.10471976, -0.008726646]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/CanvasGroup/Body/Tail:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.54, 1.57, 1.67, 1.8, 1.9, 2.1, 4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 0.19198622, -0.67718774, 0.53232545, -0.51138145, 0.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_825xp"]
+resource_name = "run"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite/CanvasGroup/Body:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.34, 0.97),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 2)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite/CanvasGroup/RightLeg:rotation")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.6981317, 0.6981317]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite/CanvasGroup/LeftLeg:rotation")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.13333334, 0.6333333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.6981317, 0.6981317]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite/CanvasGroup/Body/Tail:rotation")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 0.37524578]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite/CanvasGroup/Body/Head:rotation")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.36666664, 0.76666665),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-0.08594526, 0.06283186]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fk5o5"]
+_data = {
+&"RESET": SubResource("Animation_fk5o5"),
+&"idle": SubResource("Animation_t26db"),
+&"run": SubResource("Animation_825xp")
+}
+
+[node name="UIS_splash" type="Control" unique_id=1711478582]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tnp2k")
+
+[node name="Background" type="ColorRect" parent="." unique_id=293855494]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.015686275, 0.8039216, 0.9764706, 1)
+
+[node name="Grass" type="ColorRect" parent="." unique_id=1797199511]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -300.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.6, 0.9019608, 0.3764706, 1)
+
+[node name="Cloud1" type="Sprite2D" parent="." unique_id=1759451834]
+position = Vector2(-182.99998, -147.99998)
+scale = Vector2(2.38, 2.38)
+texture = ExtResource("14_nmto2")
+
+[node name="Cloud2" type="Sprite2D" parent="." unique_id=390599628]
+position = Vector2(1876, 13.000008)
+scale = Vector2(2.03, 2.03)
+texture = ExtResource("15_t6gwm")
+
+[node name="Player" type="Node2D" parent="." unique_id=167750358 groups=["Menu Items"]]
+position = Vector2(375, 800)
+scale = Vector2(4, 4)
+
+[node name="Sprite" type="Node2D" parent="Player" unique_id=948178972]
+material = SubResource("ShaderMaterial_w51f7")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="Player/Sprite" unique_id=1635307690]
+material = SubResource("ShaderMaterial_yk1l4")
+use_parent_material = true
+
+[node name="Body" type="Sprite2D" parent="Player/Sprite/CanvasGroup" unique_id=675494364]
+material = SubResource("ShaderMaterial_r3plo")
+use_parent_material = true
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_ecv0o")
+offset = Vector2(8.095, -55.035)
+
+[node name="Tail" type="Sprite2D" parent="Player/Sprite/CanvasGroup/Body" unique_id=1554141808]
+use_parent_material = true
+position = Vector2(-214.99998, 89.999985)
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("11_hpp27")
+offset = Vector2(218, -140)
+
+[node name="Head" type="Sprite2D" parent="Player/Sprite/CanvasGroup/Body" unique_id=1655427570]
+use_parent_material = true
+position = Vector2(15, -2.0000014)
+rotation = -0.008726646
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("12_32qyb")
+offset = Vector2(-22.485888, -61.44438)
+
+[node name="RightLeg" type="Sprite2D" parent="Player/Sprite/CanvasGroup" unique_id=462054135]
+use_parent_material = true
+position = Vector2(12, 26)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("13_cvn5t")
+offset = Vector2(-32.9, -190.015)
+
+[node name="LeftLeg" type="Sprite2D" parent="Player/Sprite/CanvasGroup" unique_id=717920678]
+use_parent_material = true
+position = Vector2(-31, 27)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("14_xvl0a")
+offset = Vector2(150.1364, -193.81833)
+
+[node name="Swim" type="AnimatedSprite2D" parent="Player/Sprite/CanvasGroup" unique_id=1489140566]
+visible = false
+material = SubResource("ShaderMaterial_4qx6x")
+use_parent_material = true
+position = Vector2(-20.000004, 28)
+scale = Vector2(0.23849995, 0.19349995)
+sprite_frames = SubResource("SpriteFrames_xef34")
+autoplay = "default"
+frame_progress = 0.46648315
+offset = Vector2(79.66458, -253.23004)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player" unique_id=1807590844]
+libraries/ = SubResource("AnimationLibrary_fk5o5")
+autoplay = &"idle"
+
+[node name="VBoxContainer" type="HBoxContainer" parent="." unique_id=863056186 groups=["Menu Items"]]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -467.0
+offset_right = 467.0
+offset_bottom = 100.0
+grow_horizontal = 2
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 350)
+offset_transform_visual_only = false
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=482070359]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+offset_transform_enabled = true
+offset_transform_visual_only = false
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=246045550]
+custom_minimum_size = Vector2(300, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+offset_transform_enabled = true
+offset_transform_visual_only = false
+theme_override_font_sizes/font_size = 50
+text = "SETTINGS"
+
+[node name="Title" type="Label" parent="." unique_id=2019679577 groups=["Menu Items"]]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -467.0
+offset_right = 467.0
+offset_bottom = 290.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.43529412, 0.92941177, 0.70980394, 1)
+theme_override_colors/font_outline_color = Color(0.05490196, 0.19215687, 0.27058825, 1)
+theme_override_constants/outline_size = 30
+theme_override_fonts/font = ExtResource("2_k6oqu")
+theme_override_font_sizes/font_size = 200
+text = "DONK LIFE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RoyMopping" type="Sprite2D" parent="." unique_id=1173400778 groups=["Menu Items"]]
+position = Vector2(1568, 624)
+scale = Vector2(4, 4)
+texture = ExtResource("17_mag26")
+
+[node name="SugarCubes" type="Sprite2D" parent="." unique_id=2118995947 groups=["Menu Items"]]
+position = Vector2(800, 950)
+scale = Vector2(1.67, 1.67)
+texture = ExtResource("15_jvjdf")
+
+[node name="SugarCubes2" type="Sprite2D" parent="." unique_id=1604316048 groups=["Menu Items"]]
+position = Vector2(1276, 863.00006)
+scale = Vector2(1.67, 1.67)
+texture = ExtResource("15_jvjdf")
+
+[node name="UIS_presentation" parent="." unique_id=1203435494 instance=ExtResource("18_mag26")]
+visible = false
+layout_mode = 1
+
+[connection signal="mouse_entered" from="VBoxContainer/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="mouse_entered" from="VBoxContainer/Settings" to="." method="_on_settings_mouse_entered"]
+[connection signal="mouse_exited" from="VBoxContainer/Settings" to="." method="_on_settings_mouse_exited"]
+[connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
