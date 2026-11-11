@@ -7,13 +7,11 @@ func _ready() -> void:
 	pass
 
 func _on_button_pressed() -> void:
-	get_tree().call_group("Menu Items","hide")
-	$UIS_presentation.visible = true
+	get_tree().call_group("Menu Items","queue_free")
+	$uis_presentation.visible = true
 	
 func _on_settings_pressed() -> void:
-	# This function needs to popup a settings modal
-	# So players can adjust settings, duh
-	pass
+	$uis_settings.visible = !$uis_settings.visible
 
 func _on_button_mouse_entered()   -> void: $VBoxContainer/Button.offset_transform_rotation = -0.07
 func _on_button_mouse_exited()    -> void: $VBoxContainer/Button.offset_transform_rotation = 0.00

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://mw8ejjkh1jvy"]
+
+[ext_resource type="Script" uid="uid://dsqex3salhuri" path="res://Scenes/Settings/uis_settings.gd" id="1_fke3n"]
+
+[node name="uis_settings" type="CanvasLayer" unique_id=1606820884]
+script = ExtResource("1_fke3n")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=614951094]
+custom_minimum_size = Vector2(0, 300)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
+
+[node name="Label" type="Label" parent="." unique_id=2022733827]
+offset_left = 50.0
+offset_top = 510.0
+offset_right = 1870.0
+offset_bottom = 569.0
+theme_override_font_sizes/font_size = 43
+text = "Here is the settings"
+horizontal_alignment = 1
+vertical_alignment = 1

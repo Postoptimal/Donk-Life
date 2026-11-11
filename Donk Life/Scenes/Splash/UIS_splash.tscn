@@ -1,40 +1,41 @@
 [gd_scene format=3 uid="uid://c4iq6kk17dfq1"]
 
-[ext_resource type="Script" uid="uid://bs1v2tye7r6n0" path="res://Scenes/Splash/UIS_splash.gd" id="1_tnp2k"]
-[ext_resource type="FontFile" uid="uid://bntnxpe8bqmcj" path="res://Assets/DarumadropOne-Regular.ttf" id="2_k6oqu"]
-[ext_resource type="Shader" uid="uid://cd2hkvfk6xc5g" path="res://Scenes/Player/palette_swap.tres" id="5_t6gwm"]
-[ext_resource type="Texture2D" uid="uid://cbax1sxehq1dd" path="res://Assets/Palettes/Default.png" id="7_lefyl"]
-[ext_resource type="Texture2D" uid="uid://dj3hubisrnbe7" path="res://Assets/Palettes/Ass green.png" id="7_nmto2"]
-[ext_resource type="Shader" uid="uid://bnhf5nuwsntq" path="res://Scenes/Player/outline.gdshader" id="8_fg34o"]
-[ext_resource type="Texture2D" uid="uid://bd2yc2xatqng7" path="res://Assets/Palettes/Red.png" id="9_08nls"]
-[ext_resource type="Texture2D" uid="uid://vqvya1omsegs" path="res://Assets/Player/Body.png" id="10_ecv0o"]
-[ext_resource type="Texture2D" uid="uid://cf2uwtc1jj0rp" path="res://Assets/Player/Tail.png" id="11_hpp27"]
-[ext_resource type="Texture2D" uid="uid://dsk68qxxr3tif" path="res://Assets/Player/Head.png" id="12_32qyb"]
-[ext_resource type="Texture2D" uid="uid://betmbqnooa60i" path="res://Assets/Player/Right_Leg.png" id="13_cvn5t"]
-[ext_resource type="Texture2D" uid="uid://0yv48splf33e" path="res://Assets/Lobby/Placeholders/Cloud1.PNG" id="14_nmto2"]
-[ext_resource type="Texture2D" uid="uid://chlsj1o4h5u3v" path="res://Assets/Player/Left_Leg.png" id="14_xvl0a"]
-[ext_resource type="Texture2D" uid="uid://57r58u6uiuig" path="res://Assets/Player/Swimming sheet.png" id="15_8ccdv"]
-[ext_resource type="Texture2D" uid="uid://cfvnsq8jeoept" path="res://Assets/Lobby/Placeholders/Sugar cubes.PNG" id="15_jvjdf"]
-[ext_resource type="Texture2D" uid="uid://bqb1knbeocw5p" path="res://Assets/Lobby/Placeholders/Cloud2.PNG" id="15_t6gwm"]
-[ext_resource type="Texture2D" uid="uid://cb0f2k6dew0bx" path="res://Assets/Lobby/Placeholders/Roy_Mopping.PNG" id="17_mag26"]
-[ext_resource type="PackedScene" uid="uid://dtfucc3b18711" path="res://Scenes/Splash/UIS_presentation.tscn" id="18_mag26"]
+[ext_resource type="Script" uid="uid://bs1v2tye7r6n0" path="res://Scenes/Splash/uis_splash.gd" id="1_dp55m"]
+[ext_resource type="Texture2D" uid="uid://0yv48splf33e" path="res://Assets/Lobby/Placeholders/Cloud1.PNG" id="2_110af"]
+[ext_resource type="Texture2D" uid="uid://bqb1knbeocw5p" path="res://Assets/Lobby/Placeholders/Cloud2.PNG" id="3_y5sb5"]
+[ext_resource type="Texture2D" uid="uid://d1hfnh1vup6a1" path="res://Assets/Lobby/Placeholders/Cloud3.PNG" id="4_dp55m"]
+[ext_resource type="Shader" uid="uid://cd2hkvfk6xc5g" path="res://Scenes/Player/palette_swap.tres" id="4_l2qlx"]
+[ext_resource type="Texture2D" uid="uid://dj3hubisrnbe7" path="res://Assets/Palettes/Ass green.png" id="5_lkjdo"]
+[ext_resource type="Texture2D" uid="uid://cbax1sxehq1dd" path="res://Assets/Palettes/Default.png" id="6_0mlvi"]
+[ext_resource type="Shader" uid="uid://bnhf5nuwsntq" path="res://Scenes/Player/outline.gdshader" id="7_w6tgy"]
+[ext_resource type="Texture2D" uid="uid://bd2yc2xatqng7" path="res://Assets/Palettes/Red.png" id="8_5o4b8"]
+[ext_resource type="Texture2D" uid="uid://vqvya1omsegs" path="res://Assets/Player/Body.png" id="9_k2fyd"]
+[ext_resource type="Texture2D" uid="uid://cf2uwtc1jj0rp" path="res://Assets/Player/Tail.png" id="10_q1a2g"]
+[ext_resource type="Texture2D" uid="uid://dsk68qxxr3tif" path="res://Assets/Player/Head.png" id="11_bvnnt"]
+[ext_resource type="Texture2D" uid="uid://betmbqnooa60i" path="res://Assets/Player/Right_Leg.png" id="12_fgt0p"]
+[ext_resource type="Texture2D" uid="uid://chlsj1o4h5u3v" path="res://Assets/Player/Left_Leg.png" id="13_5fs45"]
+[ext_resource type="Texture2D" uid="uid://57r58u6uiuig" path="res://Assets/Player/Swimming sheet.png" id="14_qm53q"]
+[ext_resource type="FontFile" uid="uid://bntnxpe8bqmcj" path="res://Assets/DarumadropOne-Regular.ttf" id="15_r703e"]
+[ext_resource type="Texture2D" uid="uid://cfvnsq8jeoept" path="res://Assets/Lobby/Placeholders/Sugar cubes.PNG" id="17_iaqlc"]
+[ext_resource type="PackedScene" uid="uid://dtfucc3b18711" path="res://Scenes/Splash/uis_presentation.tscn" id="18_pmcif"]
+[ext_resource type="PackedScene" uid="uid://mw8ejjkh1jvy" path="res://Scenes/Settings/uis_settings.tscn" id="19_vqfxo"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_w51f7"]
-shader = ExtResource("5_t6gwm")
-shader_parameter/original = ExtResource("7_lefyl")
-shader_parameter/new_palette = ExtResource("7_nmto2")
+shader = ExtResource("4_l2qlx")
+shader_parameter/original = ExtResource("6_0mlvi")
+shader_parameter/new_palette = ExtResource("5_lkjdo")
 shader_parameter/colors_count = 4
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_yk1l4"]
-shader = ExtResource("8_fg34o")
+shader = ExtResource("7_w6tgy")
 shader_parameter/outline_color = Color(0.05490196, 0.19215687, 0.27058825, 1)
 shader_parameter/thickness = 10.000000149012
 shader_parameter/sample_count = 16
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_r3plo"]
-shader = ExtResource("5_t6gwm")
-shader_parameter/original = ExtResource("7_lefyl")
-shader_parameter/new_palette = ExtResource("9_08nls")
+shader = ExtResource("4_l2qlx")
+shader_parameter/original = ExtResource("6_0mlvi")
+shader_parameter/new_palette = ExtResource("8_5o4b8")
 shader_parameter/colors_count = 4
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_0kmp4"]
@@ -44,21 +45,21 @@ load_path = "res://.godot/imported/Green.png-5b66a0b6509258a900a75377fd85ccba.ct
 load_path = "res://.godot/imported/Default.png-97756f477592584ebf0bdc5eba6e410a.ctex"
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_4qx6x"]
-shader = ExtResource("5_t6gwm")
+shader = ExtResource("4_l2qlx")
 shader_parameter/original = SubResource("CompressedTexture2D_i5acl")
 shader_parameter/new_palette = SubResource("CompressedTexture2D_0kmp4")
 shader_parameter/colors_count = 2
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t26db"]
-atlas = ExtResource("15_8ccdv")
+atlas = ExtResource("14_qm53q")
 region = Rect2(0, 0, 1000, 1000)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fk5o5"]
-atlas = ExtResource("15_8ccdv")
+atlas = ExtResource("14_qm53q")
 region = Rect2(1000, 0, 1000, 1000)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_825xp"]
-atlas = ExtResource("15_8ccdv")
+atlas = ExtResource("14_qm53q")
 region = Rect2(0, 1000, 1000, 1000)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xef34"]
@@ -265,14 +266,14 @@ _data = {
 &"run": SubResource("Animation_825xp")
 }
 
-[node name="UIS_splash" type="Control" unique_id=1711478582]
+[node name="uis_splash" type="Control" unique_id=1711478582]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_tnp2k")
+script = ExtResource("1_dp55m")
 
 [node name="Background" type="ColorRect" parent="." unique_id=293855494]
 layout_mode = 1
@@ -295,14 +296,19 @@ grow_vertical = 0
 color = Color(0.6, 0.9019608, 0.3764706, 1)
 
 [node name="Cloud1" type="Sprite2D" parent="." unique_id=1759451834]
-position = Vector2(-182.99998, -147.99998)
-scale = Vector2(2.38, 2.38)
-texture = ExtResource("14_nmto2")
+position = Vector2(346, 134)
+scale = Vector2(0.603209, 0.5913504)
+texture = ExtResource("2_110af")
 
 [node name="Cloud2" type="Sprite2D" parent="." unique_id=390599628]
-position = Vector2(1876, 13.000008)
-scale = Vector2(2.03, 2.03)
-texture = ExtResource("15_t6gwm")
+position = Vector2(1650.9999, 149.00002)
+scale = Vector2(0.7963057, 0.78973854)
+texture = ExtResource("3_y5sb5")
+
+[node name="Cloud3" type="Sprite2D" parent="." unique_id=976172210]
+position = Vector2(998.99994, 253)
+scale = Vector2(1.0000001, 1)
+texture = ExtResource("4_dp55m")
 
 [node name="Player" type="Node2D" parent="." unique_id=167750358 groups=["Menu Items"]]
 position = Vector2(375, 800)
@@ -319,14 +325,14 @@ use_parent_material = true
 material = SubResource("ShaderMaterial_r3plo")
 use_parent_material = true
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("10_ecv0o")
+texture = ExtResource("9_k2fyd")
 offset = Vector2(8.095, -55.035)
 
 [node name="Tail" type="Sprite2D" parent="Player/Sprite/CanvasGroup/Body" unique_id=1554141808]
 use_parent_material = true
 position = Vector2(-214.99998, 89.999985)
 scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("11_hpp27")
+texture = ExtResource("10_q1a2g")
 offset = Vector2(218, -140)
 
 [node name="Head" type="Sprite2D" parent="Player/Sprite/CanvasGroup/Body" unique_id=1655427570]
@@ -334,21 +340,21 @@ use_parent_material = true
 position = Vector2(15, -2.0000014)
 rotation = -0.008726646
 scale = Vector2(0.99999994, 0.99999994)
-texture = ExtResource("12_32qyb")
+texture = ExtResource("11_bvnnt")
 offset = Vector2(-22.485888, -61.44438)
 
 [node name="RightLeg" type="Sprite2D" parent="Player/Sprite/CanvasGroup" unique_id=462054135]
 use_parent_material = true
 position = Vector2(12, 26)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("13_cvn5t")
+texture = ExtResource("12_fgt0p")
 offset = Vector2(-32.9, -190.015)
 
 [node name="LeftLeg" type="Sprite2D" parent="Player/Sprite/CanvasGroup" unique_id=717920678]
 use_parent_material = true
 position = Vector2(-31, 27)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("14_xvl0a")
+texture = ExtResource("13_5fs45")
 offset = Vector2(150.1364, -193.81833)
 
 [node name="Swim" type="AnimatedSprite2D" parent="Player/Sprite/CanvasGroup" unique_id=1489140566]
@@ -411,30 +417,29 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(0.43529412, 0.92941177, 0.70980394, 1)
 theme_override_colors/font_outline_color = Color(0.05490196, 0.19215687, 0.27058825, 1)
 theme_override_constants/outline_size = 30
-theme_override_fonts/font = ExtResource("2_k6oqu")
+theme_override_fonts/font = ExtResource("15_r703e")
 theme_override_font_sizes/font_size = 200
 text = "DONK LIFE"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RoyMopping" type="Sprite2D" parent="." unique_id=1173400778 groups=["Menu Items"]]
-position = Vector2(1568, 624)
-scale = Vector2(4, 4)
-texture = ExtResource("17_mag26")
-
 [node name="SugarCubes" type="Sprite2D" parent="." unique_id=2118995947 groups=["Menu Items"]]
-position = Vector2(800, 950)
+position = Vector2(1609, 903)
 scale = Vector2(1.67, 1.67)
-texture = ExtResource("15_jvjdf")
+texture = ExtResource("17_iaqlc")
 
-[node name="SugarCubes2" type="Sprite2D" parent="." unique_id=1604316048 groups=["Menu Items"]]
-position = Vector2(1276, 863.00006)
-scale = Vector2(1.67, 1.67)
-texture = ExtResource("15_jvjdf")
-
-[node name="UIS_presentation" parent="." unique_id=1203435494 instance=ExtResource("18_mag26")]
+[node name="uis_settings" parent="." unique_id=1606820884 groups=["Menu Items"] instance=ExtResource("19_vqfxo")]
 visible = false
-layout_mode = 1
+
+[node name="uis_presentation" parent="." unique_id=1845990317 instance=ExtResource("18_pmcif")]
+visible = false
+
+[node name="SFX" type="AudioStreamPlayer" parent="." unique_id=447652567]
+bus = &"SFX"
+
+[node name="OST" type="AudioStreamPlayer" parent="." unique_id=605262586]
+autoplay = true
+bus = &"Music"
 
 [connection signal="mouse_entered" from="VBoxContainer/Button" to="." method="_on_button_mouse_entered"]
 [connection signal="mouse_exited" from="VBoxContainer/Button" to="." method="_on_button_mouse_exited"]

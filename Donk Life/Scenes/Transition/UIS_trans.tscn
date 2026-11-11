@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bjw5yg0uqdqnr"]
 
-[ext_resource type="Script" uid="uid://dia4wnmswadnw" path="res://Scenes/Transition/UIS_trans.gd" id="1_17e4v"]
-[ext_resource type="Shader" uid="uid://d14ytxqtmqqjo" path="res://Assets/transition.gdshader" id="2_jfbsm"]
+[ext_resource type="Script" uid="uid://dia4wnmswadnw" path="res://Scenes/Transition/uis_trans.gd" id="1_2u4se"]
+[ext_resource type="Shader" uid="uid://d14ytxqtmqqjo" path="res://Assets/transition.gdshader" id="2_oufur"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_17e4v"]
-shader = ExtResource("2_jfbsm")
+shader = ExtResource("2_oufur")
 shader_parameter/use_sprite_alpha = true
 shader_parameter/use_transition_texture = false
 shader_parameter/transition_type = 2
@@ -31,8 +31,9 @@ shader_parameter/clock_feather = 0.0
 shader_parameter/progress = 1.5
 shader_parameter/progress_bias = Vector2(0, 0)
 
-[node name="UIS_trans" type="CanvasLayer" unique_id=927711627]
-script = ExtResource("1_17e4v")
+[node name="uis_trans" type="CanvasLayer" unique_id=927711627]
+layer = 100
+script = ExtResource("1_2u4se")
 
 [node name="Frame" type="ColorRect" parent="." unique_id=1515950808]
 material = SubResource("ShaderMaterial_17e4v")

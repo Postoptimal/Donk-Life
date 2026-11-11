@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://72lkckpdc4g"]
+
+[ext_resource type="Script" uid="uid://2v6ou1et1fnd" path="res://Scenes/Splash/uis_slides.gd" id="1_2e4qt"]
+[ext_resource type="Texture2D" uid="uid://mldpw3rwpeso" path="res://Assets/T_HomePlacehodler.png" id="1_24c1f"]
+
+[node name="uis_slides" type="CanvasLayer" unique_id=279970551]
+script = ExtResource("1_2e4qt")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=666390985]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -355.0
+offset_right = 600.0
+offset_bottom = 355.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="ColorRect" type="ColorRect" parent="VBoxContainer" unique_id=2041301194]
+custom_minimum_size = Vector2(1200, 675)
+layout_mode = 2
+color = Color(0.101960786, 0.101960786, 0.101960786, 0.6)
+
+[node name="Image" type="TextureRect" parent="VBoxContainer/ColorRect" unique_id=100149456]
+custom_maximum_size = Vector2(928, 522)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -250.0
+offset_right = 600.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_24c1f")
+
+[node name="Story" type="Label" parent="VBoxContainer/ColorRect" unique_id=1429971830]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -49.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 35
+text = "LINE 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=111541819]
+layout_mode = 2
+theme_override_constants/separation = 50
+alignment = 1
+
+[node name="Left" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=2076838985]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_visual_only = false
+theme_override_font_sizes/font_size = 50
+text = "SKIP"
+
+[node name="Right" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=680036690]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_visual_only = false
+theme_override_font_sizes/font_size = 50
+text = "NEXT"
